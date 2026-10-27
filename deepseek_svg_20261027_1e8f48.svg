@@ -1,0 +1,256 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <!-- ФОН -->
+  <g id="bg">
+    <rect id="bg_rect" x="0" y="0" width="1080" height="1920" fill="#FFF4E0"/>
+  </g>
+
+  <!-- МАСКОТ ФИКСА -->
+  <g id="mascot">
+
+    <!-- ХВОСТ -->
+    <g id="mascot_tail">
+      <path id="tail_body" d="M390 1120 C260 1080 210 980 250 890 C290 800 390 850 410 940 C425 1010 430 1080 420 1150 Z"
+            fill="#FF8A3D" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
+      <path id="tail_tip" d="M250 890 C280 840 330 835 360 865 C330 880 300 900 285 930 C270 930 255 915 250 890 Z"
+            fill="#FFF4E0" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
+    </g>
+
+    <!-- НОГИ И ОБУВЬ -->
+    <g id="mascot_legs">
+      <rect id="leg_l" x="430" y="1240" width="90" height="270" rx="30" fill="#1F4E79" stroke="#222222" stroke-width="10"/>
+      <rect id="leg_r" x="560" y="1240" width="90" height="270" rx="30" fill="#1F4E79" stroke="#222222" stroke-width="10"/>
+
+      <path id="shoe_l" d="M405 1510 Q405 1565 470 1565 L515 1565 Q535 1565 535 1540 L535 1510 Q470 1480 405 1510 Z"
+            fill="#1F4E79" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
+      <path id="shoe_r" d="M675 1510 Q675 1565 610 1565 L565 1565 Q545 1565 545 1540 L545 1510 Q610 1480 675 1510 Z"
+            fill="#1F4E79" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
+
+      <circle id="paw_l_1" cx="445" cy="1535" r="12" fill="#FFF4E0"/>
+      <circle id="paw_l_2" cx="475" cy="1530" r="12" fill="#FFF4E0"/>
+      <circle id="paw_l_3" cx="505" cy="1535" r="12" fill="#FFF4E0"/>
+      <circle id="paw_r_1" cx="575" cy="1535" r="12" fill="#FFF4E0"/>
+      <circle id="paw_r_2" cx="605" cy="1530" r="12" fill="#FFF4E0"/>
+      <circle id="paw_r_3" cx="635" cy="1535" r="12" fill="#FFF4E0"/>
+    </g>
+
+    <!-- ТЕЛО, ЖИЛЕТ, РУБАШКА -->
+    <g id="mascot_body">
+      <path id="torso" d="M395 980 Q540 925 685 980 L705 1270 Q540 1320 375 1270 Z"
+            fill="#FF8A3D" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
+
+      <path id="shirt" d="M500 945 L580 945 L580 1280 L500 1280 Z"
+            fill="#FFF4E0" stroke="#222222" stroke-width="8" stroke-linejoin="round"/>
+
+      <path id="vest_l" d="M395 980 L520 960 L520 1280 L375 1270 Z"
+            fill="#3DAA8C" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
+      <path id="vest_r" d="M685 980 L560 960 L560 1280 L705 1270 Z"
+            fill="#3DAA8C" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
+
+      <path id="vest_stripe_l" d="M390 1130 L520 1130 L520 1154 L382 1154 Z" fill="#FFF4E0"/>
+      <path id="vest_stripe_r" d="M560 1130 L690 1130 L698 1154 L560 1154 Z" fill="#FFF4E0"/>
+
+      <path id="vest_pocket_l" d="M405 1190 L470 1190 L470 1235 L405 1235 Z"
+            fill="none" stroke="#222222" stroke-width="6" stroke-linejoin="round"/>
+    </g>
+
+    <!-- РУКИ: НАБОР ПОЗ (активна одна) -->
+    <g id="mascot_arms">
+
+      <!-- ПОЗА 1: ПО УМОЛЧАНИЮ (левая с блокнотом, правая поднята) -->
+      <g id="arms_pose_default" style="display:inline">
+        <!-- Левая рука с блокнотом -->
+        <g id="arm_l_default">
+          <path id="arm_l_outline" d="M415 1020 C360 1060 330 1140 340 1235"
+                fill="none" stroke="#222222" stroke-width="70" stroke-linecap="round"/>
+          <path id="arm_l_fill" d="M415 1020 C360 1060 330 1140 340 1235"
+                fill="none" stroke="#FF8A3D" stroke-width="50" stroke-linecap="round"/>
+
+          <circle id="hand_l_default" cx="345" cy="1245" r="42" fill="#FF8A3D" stroke="#222222" stroke-width="10"/>
+
+          <g id="notebook_default">
+            <rect id="notebook_body" x="285" y="1225" width="120" height="160" rx="12"
+                  fill="#FFF4E0" stroke="#222222" stroke-width="10"/>
+            <rect id="notebook_spine" x="285" y="1225" width="18" height="160" rx="6"
+                  fill="#3DAA8C" stroke="#222222" stroke-width="6"/>
+            <path id="notebook_line_1" d="M325 1265 L380 1265" stroke="#222222" stroke-width="6" stroke-linecap="round"/>
+            <path id="notebook_line_2" d="M325 1295 L380 1295" stroke="#222222" stroke-width="6" stroke-linecap="round"/>
+            <path id="notebook_line_3" d="M325 1325 L365 1325" stroke="#222222" stroke-width="6" stroke-linecap="round"/>
+            <rect id="notebook_pen" x="372" y="1238" width="12" height="70" rx="6"
+                  fill="#FF8A3D" stroke="#222222" stroke-width="6"/>
+          </g>
+        </g>
+
+        <!-- Правая рука поднята -->
+        <g id="arm_r_default">
+          <path id="arm_r_outline" d="M665 1020 C720 980 760 900 780 800"
+                fill="none" stroke="#222222" stroke-width="70" stroke-linecap="round"/>
+          <path id="arm_r_fill" d="M665 1020 C720 980 760 900 780 800"
+                fill="none" stroke="#FF8A3D" stroke-width="50" stroke-linecap="round"/>
+
+          <circle id="hand_r_default" cx="790" cy="780" r="45" fill="#FF8A3D" stroke="#222222" stroke-width="10"/>
+          <path id="finger_r_default" d="M800 750 L800 650 Q800 625 820 625 Q840 625 840 650 L840 750"
+                fill="#FF8A3D" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
+          <path id="thumb_r_default" d="M760 765 Q735 750 730 725 Q728 710 742 708 Q756 706 765 725"
+                fill="#FF8A3D" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
+        </g>
+      </g>
+
+      <!-- ПОЗА 2: РУКИ ОПУЩЕНЫ -->
+      <g id="arms_pose_down" style="display:none">
+        <g id="arm_l_down">
+          <path id="arm_l_down_outline" d="M415 1020 C380 1080 370 1180 375 1280"
+                fill="none" stroke="#222222" stroke-width="70" stroke-linecap="round"/>
+          <path id="arm_l_down_fill" d="M415 1020 C380 1080 370 1180 375 1280"
+                fill="none" stroke="#FF8A3D" stroke-width="50" stroke-linecap="round"/>
+          <circle id="hand_l_down" cx="375" cy="1295" r="42" fill="#FF8A3D" stroke="#222222" stroke-width="10"/>
+        </g>
+        <g id="arm_r_down">
+          <path id="arm_r_down_outline" d="M665 1020 C700 1080 710 1180 705 1280"
+                fill="none" stroke="#222222" stroke-width="70" stroke-linecap="round"/>
+          <path id="arm_r_down_fill" d="M665 1020 C700 1080 710 1180 705 1280"
+                fill="none" stroke="#FF8A3D" stroke-width="50" stroke-linecap="round"/>
+          <circle id="hand_r_down" cx="705" cy="1295" r="42" fill="#FF8A3D" stroke="#222222" stroke-width="10"/>
+        </g>
+      </g>
+
+      <!-- ПОЗА 3: ЛЕВАЯ РУКА ПОКАЗЫВАЕТ ВПЕРЁД, ПРАВАЯ С БЛОКНОТОМ -->
+      <g id="arms_pose_point_left" style="display:none">
+        <!-- Левая рука указывает -->
+        <g id="arm_l_point">
+          <path id="arm_l_point_outline" d="M415 1020 C350 980 280 950 220 930"
+                fill="none" stroke="#222222" stroke-width="70" stroke-linecap="round"/>
+          <path id="arm_l_point_fill" d="M415 1020 C350 980 280 950 220 930"
+                fill="none" stroke="#FF8A3D" stroke-width="50" stroke-linecap="round"/>
+          <circle id="hand_l_point" cx="210" cy="920" r="45" fill="#FF8A3D" stroke="#222222" stroke-width="10"/>
+          <path id="finger_l_point" d="M190 920 L100 880 Q80 870 85 855 Q90 840 110 850 L200 890"
+                fill="#FF8A3D" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
+        </g>
+        <!-- Правая рука с блокнотом -->
+        <g id="arm_r_notebook">
+          <path id="arm_r_notebook_outline" d="M665 1020 C700 1100 720 1180 730 1250"
+                fill="none" stroke="#222222" stroke-width="70" stroke-linecap="round"/>
+          <path id="arm_r_notebook_fill" d="M665 1020 C700 1100 720 1180 730 1250"
+                fill="none" stroke="#FF8A3D" stroke-width="50" stroke-linecap="round"/>
+          <circle id="hand_r_notebook" cx="735" cy="1265" r="42" fill="#FF8A3D" stroke="#222222" stroke-width="10"/>
+          <g id="notebook_right">
+            <rect id="notebook_right_body" x="690" y="1240" width="120" height="160" rx="12"
+                  fill="#FFF4E0" stroke="#222222" stroke-width="10"/>
+            <rect id="notebook_right_spine" x="690" y="1240" width="18" height="160" rx="6"
+                  fill="#3DAA8C" stroke="#222222" stroke-width="6"/>
+            <path id="notebook_right_line_1" d="M730 1280 L785 1280" stroke="#222222" stroke-width="6" stroke-linecap="round"/>
+            <path id="notebook_right_line_2" d="M730 1310 L785 1310" stroke="#222222" stroke-width="6" stroke-linecap="round"/>
+            <path id="notebook_right_line_3" d="M730 1340 L770 1340" stroke="#222222" stroke-width="6" stroke-linecap="round"/>
+            <rect id="notebook_right_pen" x="777" y="1253" width="12" height="70" rx="6"
+                  fill="#FF8A3D" stroke="#222222" stroke-width="6"/>
+          </g>
+        </g>
+      </g>
+
+      <!-- ПОЗА 4: ОБЕ РУКИ ВВЕРХ / ПРИВЕТСТВИЕ -->
+      <g id="arms_pose_wave" style="display:none">
+        <g id="arm_l_wave">
+          <path id="arm_l_wave_outline" d="M415 1020 C360 950 320 880 310 800"
+                fill="none" stroke="#222222" stroke-width="70" stroke-linecap="round"/>
+          <path id="arm_l_wave_fill" d="M415 1020 C360 950 320 880 310 800"
+                fill="none" stroke="#FF8A3D" stroke-width="50" stroke-linecap="round"/>
+          <circle id="hand_l_wave" cx="305" cy="780" r="45" fill="#FF8A3D" stroke="#222222" stroke-width="10"/>
+          <path id="finger_l_wave" d="M300 740 L300 640 Q300 615 320 615 Q340 615 340 640 L340 740"
+                fill="#FF8A3D" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
+        </g>
+        <g id="arm_r_wave">
+          <path id="arm_r_wave_outline" d="M665 1020 C720 950 760 880 770 800"
+                fill="none" stroke="#222222" stroke-width="70" stroke-linecap="round"/>
+          <path id="arm_r_wave_fill" d="M665 1020 C720 950 760 880 770 800"
+                fill="none" stroke="#FF8A3D" stroke-width="50" stroke-linecap="round"/>
+          <circle id="hand_r_wave" cx="775" cy="780" r="45" fill="#FF8A3D" stroke="#222222" stroke-width="10"/>
+          <path id="finger_r_wave" d="M780 740 L780 640 Q780 615 800 615 Q820 615 820 640 L820 740"
+                fill="#FF8A3D" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
+        </g>
+      </g>
+
+    </g>
+
+    <!-- ГОЛОВА, УШИ, МОРДА -->
+    <g id="mascot_head">
+      <polygon id="ear_l" points="390,660 330,420 510,560" fill="#FF8A3D" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
+      <polygon id="ear_l_inner" points="405,640 365,480 475,565" fill="#FFF4E0" stroke="#222222" stroke-width="8" stroke-linejoin="round"/>
+
+      <polygon id="ear_r" points="690,660 750,420 570,560" fill="#FF8A3D" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
+      <polygon id="ear_r_inner" points="675,640 715,480 605,565" fill="#FFF4E0" stroke="#222222" stroke-width="8" stroke-linejoin="round"/>
+
+      <circle id="head_base" cx="540" cy="780" r="180" fill="#FF8A3D" stroke="#222222" stroke-width="10"/>
+
+      <path id="muzzle" d="M420 800 Q540 900 660 800 Q660 900 540 915 Q420 900 420 800 Z"
+            fill="#FFF4E0" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
+
+      <circle id="eye_l" cx="475" cy="760" r="32" fill="#222222"/>
+      <circle id="eye_l_highlight" cx="486" cy="748" r="10" fill="#FFF4E0"/>
+      <circle id="eye_r" cx="605" cy="760" r="32" fill="#222222"/>
+      <circle id="eye_r_highlight" cx="616" cy="748" r="10" fill="#FFF4E0"/>
+
+      <!-- БРОВИ: НАБОР (активна одна) -->
+      <g id="mascot_eyebrows">
+        <!-- По умолчанию: приподнятые -->
+        <g id="eyebrows_default" style="display:inline">
+          <path id="eyebrow_l_default" d="M435 710 Q475 690 515 710" fill="none" stroke="#222222" stroke-width="10" stroke-linecap="round"/>
+          <path id="eyebrow_r_default" d="M565 710 Q605 690 645 710" fill="none" stroke="#222222" stroke-width="10" stroke-linecap="round"/>
+        </g>
+        <!-- Выше -->
+        <g id="eyebrows_high" style="display:none">
+          <path id="eyebrow_l_high" d="M435 690 Q475 665 515 690" fill="none" stroke="#222222" stroke-width="10" stroke-linecap="round"/>
+          <path id="eyebrow_r_high" d="M565 690 Q605 665 645 690" fill="none" stroke="#222222" stroke-width="10" stroke-linecap="round"/>
+        </g>
+        <!-- Ниже / нахмуренные -->
+        <g id="eyebrows_low" style="display:none">
+          <path id="eyebrow_l_low" d="M435 730 Q475 745 515 730" fill="none" stroke="#222222" stroke-width="10" stroke-linecap="round"/>
+          <path id="eyebrow_r_low" d="M565 730 Q605 745 645 730" fill="none" stroke="#222222" stroke-width="10" stroke-linecap="round"/>
+        </g>
+      </g>
+
+      <circle id="nose" cx="540" cy="815" r="16" fill="#222222"/>
+
+      <!-- РОТ: НАБОР (активен один) -->
+      <g id="mascot_mouth">
+        <!-- По умолчанию: нейтральная улыбка -->
+        <g id="mouth_neutral" style="display:inline">
+          <path id="mouth_left" d="M540 830 Q520 860 500 850" fill="none" stroke="#222222" stroke-width="8" stroke-linecap="round"/>
+          <path id="mouth_right" d="M540 830 Q560 860 580 850" fill="none" stroke="#222222" stroke-width="8" stroke-linecap="round"/>
+          <path id="mouth_center" d="M540 830 L540 852" fill="none" stroke="#222222" stroke-width="8" stroke-linecap="round"/>
+        </g>
+        <!-- Открытый рот (улыбка) -->
+        <g id="mouth_open" style="display:none">
+          <path id="mouth_open_shape" d="M490 840 Q540 900 590 840 Q540 870 490 840 Z"
+                fill="#222222" stroke="#222222" stroke-width="6" stroke-linejoin="round"/>
+          <path id="mouth_open_tongue" d="M510 855 Q540 880 570 855 Q540 870 510 855 Z"
+                fill="#FF8A3D" stroke="none"/>
+        </g>
+        <!-- Удивлённый рот (O) -->
+        <g id="mouth_surprised" style="display:none">
+          <ellipse id="mouth_surprised_shape" cx="540" cy="850" rx="22" ry="28"
+                   fill="#222222" stroke="#222222" stroke-width="6"/>
+          <ellipse id="mouth_surprised_inner" cx="540" cy="845" rx="10" ry="14"
+                   fill="#FFF4E0" stroke="none"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- КАСКА -->
+    <g id="mascot_helmet">
+      <path id="helmet_dome" d="M350 650 Q355 500 540 495 Q725 500 730 650 Z"
+            fill="#1F4E79" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
+      <rect id="helmet_brim" x="315" y="635" width="450" height="60" rx="30"
+            fill="#1F4E79" stroke="#222222" stroke-width="10"/>
+      <rect id="helmet_band" x="350" y="610" width="380" height="35" rx="15"
+            fill="#1F4E79" stroke="#222222" stroke-width="8"/>
+
+      <circle id="helmet_lamp_outer" cx="540" cy="560" r="34" fill="#FFF4E0" stroke="#222222" stroke-width="10"/>
+      <circle id="helmet_lamp_inner" cx="540" cy="560" r="16" fill="#FF8A3D" stroke="#222222" stroke-width="6"/>
+
+      <rect id="helmet_badge" x="640" y="550" width="40" height="50" rx="8"
+            fill="#3DAA8C" stroke="#222222" stroke-width="8"/>
+
+      <path id="helmet_ridge" d="M400 620 Q540 590 680 620" fill="none" stroke="#FFF4E0" stroke-width="8" stroke-linecap="round"/>
+    </g>
+
+  </g>
+</svg>
