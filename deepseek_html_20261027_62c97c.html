@@ -68,92 +68,138 @@
         }
         #btn-pause:hover { box-shadow: 0 6px 20px rgba(16, 48, 78, 0.6); }
 
-        /* --- CSS АНИМАЦИИ --- */
+        /* --- FOX TEST ANIMATION v2 --- */
 
-        /* По умолчанию все анимации на паузе */
-        #mascot_mouth, #mascot_eyebrows, #arms_pose_default, #eyes {
+        /*
+          The SVG contains several alternative drawing poses in the same file.
+          Keep exactly one pose visible at a time; otherwise duplicate arms,
+          mouths and brows overlap and make the character look broken.
+        */
+        #arms_pose_down,
+        #arms_pose_point_left,
+        #arms_pose_wave,
+        #eyebrows_high,
+        #eyebrows_low,
+        #mouth_open,
+        #mouth_surprised {
+            display: none !important;
+        }
+
+        #arms_pose_default,
+        #eyebrows_default,
+        #mouth_neutral {
+            display: inline;
+        }
+
+        /* Stable resting face before the animation is started. */
+        #mascot_eyes_open {
+            opacity: 1;
+            animation: none;
+        }
+
+        #eyes_closed {
+            opacity: 0;
+            animation: none;
+        }
+
+        /* All movement is paused until the Start button is pressed. */
+        #mascot,
+        #mascot_body,
+        #mascot_head,
+        #mascot_tail,
+        #mascot_eyes_open,
+        #eyes_closed {
             animation-play-state: paused;
         }
 
-        /* 1. Анимация рта (переключение нейтрального и открытого) */
-        #mouth_neutral {
-            animation: talkNeutral 0.3s infinite alternate ease-in-out;
-            animation-play-state: inherit;
-        }
-        #mouth_open {
-            animation: talkOpen 0.3s infinite alternate ease-in-out;
-            animation-play-state: inherit;
-        }
-        @keyframes talkNeutral {
-            0% { opacity: 1; }
-            100% { opacity: 0; }
-        }
-        @keyframes talkOpen {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+        /* A tiny whole-character float gives the idle animation some life. */
+        #mascot {
+            transform-box: fill-box;
+            transform-origin: center bottom;
+            animation: foxFloat 3.8s ease-in-out infinite;
         }
 
-        /* 2. Брови (поднимаются при разговоре) */
-        #eyebrows_default {
-            animation: browDown 0.6s infinite alternate ease-in-out;
-            animation-play-state: inherit;
-        }
-        #eyebrows_high {
-            animation: browUp 0.6s infinite alternate ease-in-out;
-            animation-play-state: inherit;
-        }
-        @keyframes browDown {
-            0% { opacity: 1; }
-            100% { opacity: 0; }
-        }
-        @keyframes browUp {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+        @keyframes foxFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-0.45%); }
         }
 
-        /* 3. Покачивание рук (жесты) */
-        #arms_pose_default {
-            transform-origin: center 70%; /* Точка вращения у плеч */
-            animation: armsSway 2s infinite ease-in-out;
-            animation-play-state: inherit;
+        /* Subtle breathing; the lower edge stays almost anchored. */
+        #mascot_body {
+            transform-box: fill-box;
+            transform-origin: 50% 100%;
+            animation: foxBreathe 3.4s ease-in-out infinite;
         }
-        @keyframes armsSway {
+
+        @keyframes foxBreathe {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(1.006); }
+        }
+
+        /* A very small head nod, not a constant exaggerated bob. */
+        #mascot_head {
+            transform-box: fill-box;
+            transform-origin: 50% 92%;
+            animation: foxHeadIdle 4.6s ease-in-out infinite;
+        }
+
+        @keyframes foxHeadIdle {
             0%, 100% { transform: rotate(0deg); }
-            25% { transform: rotate(1.5deg); }
-            75% { transform: rotate(-1.5deg); }
+            45% { transform: rotate(-0.35deg); }
+            70% { transform: rotate(0.15deg); }
         }
 
-        /* 4. Моргание глаз */
-        #mascot_eyes_open {
-            animation: blinkOpen 4s infinite;
-            animation-play-state: inherit;
+        /* Tail sways gently around the point where it joins the body. */
+        #mascot_tail {
+            transform-box: fill-box;
+            transform-origin: 88% 82%;
+            animation: foxTailSway 2.9s ease-in-out infinite;
         }
+
+        @keyframes foxTailSway {
+            0%, 100% { transform: rotate(0deg); }
+            35% { transform: rotate(-1.8deg); }
+            70% { transform: rotate(1.2deg); }
+        }
+
+        /* One quick blink every few seconds. No artificial talking animation. */
+        #mascot_eyes_open {
+            animation: foxEyesOpen 5.2s infinite;
+        }
+
         #eyes_closed {
-            animation: blinkClosed 4s infinite;
-            animation-play-state: inherit;
+            animation: foxEyesClosed 5.2s infinite;
             opacity: 0;
         }
-        @keyframes blinkOpen {
-            0%, 96%, 100% { opacity: 1; }
-            98% { opacity: 0; }
-        }
-        @keyframes blinkClosed {
-            0%, 96%, 100% { opacity: 0; }
-            98% { opacity: 1; }
+
+        @keyframes foxEyesOpen {
+            0%, 91%, 95%, 100% { opacity: 1; }
+            93% { opacity: 0; }
         }
 
-        /* Класс для запуска всех анимаций */
-        .animating #mascot_mouth,
-        .animating #mascot_eyebrows,
-        .animating #arms_pose_default,
-        .animating #eyes,
-        .animating #mouth_neutral,
-        .animating #mouth_open,
-        .animating #eyebrows_default,
-        .animating #eyebrows_high,
+        @keyframes foxEyesClosed {
+            0%, 91%, 95%, 100% { opacity: 0; }
+            93% { opacity: 1; }
+        }
+
+        .animating #mascot,
+        .animating #mascot_body,
+        .animating #mascot_head,
+        .animating #mascot_tail,
         .animating #mascot_eyes_open,
         .animating #eyes_closed {
             animation-play-state: running;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animating #mascot,
+            .animating #mascot_body,
+            .animating #mascot_head,
+            .animating #mascot_tail,
+            .animating #mascot_eyes_open,
+            .animating #eyes_closed {
+                animation: none;
+            }
         }
 
     </style>
@@ -161,7 +207,7 @@
 <body>
 
     <div class="svg-container" id="fox-container">
-        <!-- ВАШ SVG КОД -->
+        <!-- Embedded fox SVG: keep the artwork and layer IDs intact. -->
         <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210mm" height="297mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
         viewBox="0 0 21000 29700"
         xmlns:xlink="http://www.w3.org/1999/xlink"
