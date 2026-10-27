@@ -91,6 +91,35 @@
             display: inline;
         }
 
+        /* Conversation mode switches only between neutral and open mouth.
+           The surprised mouth stays hidden in this test version. */
+        #mouth_open {
+            display: none !important;
+        }
+
+        .talking #mouth_neutral,
+        .talking #mouth_open {
+            display: inline !important;
+        }
+
+        .talking #mouth_neutral {
+            animation: foxTalkNeutral 1.05s steps(1, end) infinite;
+        }
+
+        .talking #mouth_open {
+            animation: foxTalkOpen 1.05s steps(1, end) infinite;
+        }
+
+        @keyframes foxTalkNeutral {
+            0%, 18%, 43%, 70%, 100% { opacity: 1; }
+            19%, 42%, 71%, 99% { opacity: 0; }
+        }
+
+        @keyframes foxTalkOpen {
+            0%, 18%, 43%, 70%, 100% { opacity: 0; }
+            19%, 42%, 71%, 99% { opacity: 1; }
+        }
+
         /* Stable resting face before the animation is started. */
         #mascot_eyes_open {
             opacity: 1;
@@ -798,21 +827,77 @@
     <div class="controls">
         <button id="btn-start">▶ Старт</button>
         <button id="btn-pause">⏸ Пауза</button>
+        <button id="btn-talk" aria-pressed="false">💬 Разговор</button>
     </div>
 
     <script>
         const container = document.getElementById('fox-container');
         const btnStart = document.getElementById('btn-start');
         const btnPause = document.getElementById('btn-pause');
+        const btnTalk = document.getElementById('btn-talk');
+        const mouthNeutral = container.querySelector('#mouth_neutral');
+        const mouthOpen = container.querySelector('#mouth_open');
 
-        // Запуск анимации
+        let talking = false;
+        let talkTimer = null;
+        let talkStep = 0;
+
+        // Start / pause the character's gentle idle movement.
         btnStart.addEventListener('click', () => {
             container.classList.add('animating');
         });
 
-        // Пауза
         btnPause.addEventListener('click', () => {
             container.classList.remove('animating');
+        });
+
+        // Conversation mode: alternate neutral and open mouth with natural pauses.
+        // The surprised mouth remains hidden throughout.
+        const talkRhythm = [
+            { mouth: 'open', duration: 150 },
+            { mouth: 'neutral', duration: 170 },
+            { mouth: 'open', duration: 130 },
+            { mouth: 'neutral', duration: 560 },
+            { mouth: 'open', duration: 170 },
+            { mouth: 'neutral', duration: 650 }
+        ];
+
+        function setTalkMouth(mouth) {
+            mouthNeutral.style.opacity = mouth === 'neutral' ? '1' : '0';
+            mouthOpen.style.opacity = mouth === 'open' ? '1' : '0';
+        }
+
+        function runTalkRhythm() {
+            if (!talking) return;
+            const step = talkRhythm[talkStep % talkRhythm.length];
+            setTalkMouth(step.mouth);
+            talkStep += 1;
+            talkTimer = window.setTimeout(runTalkRhythm, step.duration);
+        }
+
+        function stopTalking() {
+            talking = false;
+            window.clearTimeout(talkTimer);
+            container.classList.remove('talking');
+            btnTalk.setAttribute('aria-pressed', 'false');
+            btnTalk.textContent = '💬 Разговор';
+            mouthNeutral.style.opacity = '';
+            mouthOpen.style.opacity = '';
+            talkStep = 0;
+        }
+
+        btnTalk.addEventListener('click', () => {
+            if (talking) {
+                stopTalking();
+                return;
+            }
+
+            talking = true;
+            container.classList.add('talking');
+            btnTalk.setAttribute('aria-pressed', 'true');
+            btnTalk.textContent = '💬 Завершить разговор';
+            talkStep = 0;
+            runTalkRhythm();
         });
     </script>
 </body>
