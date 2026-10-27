@@ -130,6 +130,11 @@
             box-shadow: none;
             border-radius: 0;
         }
+
+        /* Chroma-key mode: hide the illustrated scene, leaving the fox artwork visible. */
+        body.chroma-key #bg {
+            display: none !important;
+        }
         #btn-green {
             background-color: #3DAA8C;
             box-shadow: 0 4px 15px rgba(61, 170, 140, 0.35);
