@@ -1,256 +1,588 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
-  <!-- ФОН -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210mm" height="297mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 21000 29700"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str10 {stroke:white;stroke-width:238.13;stroke-linecap:round;stroke-miterlimit:22.9256;stroke-opacity:0.301961}
+    .str40 {stroke:white;stroke-width:264.58;stroke-linecap:round;stroke-miterlimit:22.9256;stroke-opacity:0.301961}
+    .str48 {stroke:white;stroke-width:317.5;stroke-linecap:round;stroke-miterlimit:22.9256;stroke-opacity:0.349020}
+    .str44 {stroke:#E36F20;stroke-width:132.29;stroke-linecap:round;stroke-miterlimit:22.9256;stroke-opacity:0.349020}
+    .str20 {stroke:white;stroke-width:158.75;stroke-linecap:round;stroke-miterlimit:22.9256;stroke-opacity:0.400000}
+    .str49 {stroke:white;stroke-width:211.67;stroke-linecap:round;stroke-miterlimit:22.9256;stroke-opacity:0.400000}
+    .str31 {stroke:#E36F20;stroke-width:238.13;stroke-linecap:round;stroke-miterlimit:22.9256;stroke-opacity:0.450980}
+    .str51 {stroke:#10304E;stroke-width:158.75;stroke-linecap:round;stroke-miterlimit:22.9256;stroke-opacity:0.501961}
+    .str25 {stroke:#222222;stroke-width:105.83;stroke-miterlimit:22.9256;stroke-opacity:0.549020}
+    .str41 {stroke:#C85B17;stroke-width:132.29;stroke-linecap:round;stroke-miterlimit:22.9256;stroke-opacity:0.549020}
+    .str47 {stroke:#222222;stroke-width:211.67;stroke-linecap:round;stroke-miterlimit:22.9256;stroke-opacity:0.549020}
+    .str23 {stroke:#9BE3CC;stroke-width:211.67;stroke-linecap:round;stroke-miterlimit:22.9256;stroke-opacity:0.549020}
+    .str14 {stroke:#5B8FC2;stroke-width:185.21;stroke-linecap:round;stroke-miterlimit:22.9256;stroke-opacity:0.600000}
+    .str32 {stroke:#FFC38F;stroke-width:211.67;stroke-linecap:round;stroke-miterlimit:22.9256;stroke-opacity:0.600000}
+    .str12 {stroke:#222222;stroke-width:132.29;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256;stroke-opacity:0.600000}
+    .str0 {stroke:#F0D2A0;stroke-width:158.75;stroke-miterlimit:22.9256;stroke-opacity:0.701961}
+    .str3 {stroke:#D9B07A;stroke-width:132.29;stroke-miterlimit:22.9256;stroke-opacity:0.701961}
+    .str11 {stroke:#C85B17;stroke-width:158.75;stroke-linecap:round;stroke-miterlimit:22.9256;stroke-opacity:0.701961}
+    .str34 {stroke:#FFC38F;stroke-width:185.21;stroke-linecap:round;stroke-miterlimit:22.9256;stroke-opacity:0.701961}
+    .str42 {stroke:#222222;stroke-width:132.29;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256;stroke-opacity:0.701961}
+    .str2 {stroke:#D9B07A;stroke-width:132.29;stroke-miterlimit:22.9256;stroke-opacity:0.800000}
+    .str35 {stroke:#C85B17;stroke-width:105.83;stroke-linecap:round;stroke-miterlimit:22.9256;stroke-opacity:0.800000}
+    .str33 {stroke:#C85B17;stroke-width:79.38;stroke-miterlimit:22.9256;stroke-dasharray:52.910000 899.470000;stroke-opacity:0.800000}
+    .str26 {stroke:#222222;stroke-width:79.38;stroke-miterlimit:22.9256}
+    .str7 {stroke:#222222;stroke-width:158.75;stroke-miterlimit:22.9256}
+    .str13 {stroke:#222222;stroke-width:264.58;stroke-miterlimit:22.9256}
+    .str16 {stroke:#222222;stroke-width:132.29;stroke-miterlimit:22.9256}
+    .str6 {stroke:#222222;stroke-width:211.67;stroke-miterlimit:22.9256}
+    .str1 {stroke:#D9B07A;stroke-width:211.67;stroke-miterlimit:22.9256}
+    .str36 {stroke:#222222;stroke-width:79.38;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str5 {stroke:#222222;stroke-width:158.75;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str38 {stroke:#222222;stroke-width:105.83;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str18 {stroke:#222222;stroke-width:185.21;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str9 {stroke:#222222;stroke-width:264.58;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str17 {stroke:#10304E;stroke-width:132.29;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str21 {stroke:#222222;stroke-width:132.29;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str4 {stroke:#222222;stroke-width:211.67;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str50 {stroke:#10304E;stroke-width:158.75;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str37 {stroke:#222222;stroke-width:158.75;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str22 {stroke:#FFF4E0;stroke-width:158.75;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str46 {stroke:#FFF4E0;stroke-width:105.83;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str43 {stroke:#222222;stroke-width:264.58;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str29 {stroke:#222222;stroke-width:1852.08;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str27 {stroke:#222222;stroke-width:132.29;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str28 {stroke:#3DAA8C;stroke-width:132.29;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str39 {stroke:#F3C48A;stroke-width:132.29;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str19 {stroke:#FFF4E0;stroke-width:132.29;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str45 {stroke:white;stroke-width:132.29;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str8 {stroke:#222222;stroke-width:211.67;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str30 {stroke:#FF8A3D;stroke-width:1322.92;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str52 {stroke:#FFF4E0;stroke-width:132.29;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str15 {stroke:#10304E;stroke-width:105.83;stroke-linecap:round;stroke-miterlimit:22.9256;stroke-dasharray:264.550000 211.640000}
+    .str24 {stroke:#1E6E58;stroke-width:105.83;stroke-linecap:round;stroke-miterlimit:22.9256;stroke-dasharray:211.640000 158.730000}
+    .fil7 {fill:none;fill-rule:nonzero}
+    .fil21 {fill:none;fill-rule:nonzero}
+    .fil54 {fill:none;fill-rule:nonzero}
+    .fil28 {fill:none;fill-rule:nonzero}
+    .fil35 {fill:none;fill-rule:nonzero}
+    .fil56 {fill:none;fill-rule:nonzero}
+    .fil46 {fill:none;fill-rule:nonzero}
+    .fil23 {fill:none;fill-rule:nonzero}
+    .fil22 {fill:none;fill-rule:nonzero}
+    .fil36 {fill:none;fill-rule:nonzero}
+    .fil6 {fill:black;fill-rule:nonzero}
+    .fil50 {fill:#161616;fill-rule:nonzero}
+    .fil26 {fill:#1B4770;fill-rule:nonzero}
+    .fil12 {fill:#1F4E79;fill-rule:nonzero}
+    .fil15 {fill:#222222;fill-rule:nonzero}
+    .fil41 {fill:#2B2B2B;fill-rule:nonzero}
+    .fil33 {fill:#2F967A;fill-rule:nonzero}
+    .fil38 {fill:#3DAA8C;fill-rule:nonzero}
+    .fil49 {fill:#5A3317;fill-rule:nonzero}
+    .fil13 {fill:#8A5A2B;fill-rule:nonzero}
+    .fil55 {fill:#9FC3E6;fill-rule:nonzero}
+    .fil39 {fill:#E4572E;fill-rule:nonzero}
+    .fil40 {fill:#E6D3B3;fill-rule:nonzero}
+    .fil11 {fill:#FF8A3D;fill-rule:nonzero}
+    .fil14 {fill:#FFD23F;fill-rule:nonzero}
+    .fil0 {fill:#FFF4E0;fill-rule:nonzero}
+    .fil37 {fill:#222222;fill-rule:nonzero;fill-opacity:0.180392}
+    .fil4 {fill:white;fill-rule:nonzero;fill-opacity:0.180392}
+    .fil3 {fill:white;fill-rule:nonzero;fill-opacity:0.219608}
+    .fil31 {fill:#10304E;fill-rule:nonzero;fill-opacity:0.250980}
+    .fil10 {fill:#8A5A2B;fill-rule:nonzero;fill-opacity:0.278431}
+    .fil2 {fill:white;fill-rule:nonzero;fill-opacity:0.278431}
+    .fil34 {fill:#10304E;fill-rule:nonzero;fill-opacity:0.301961}
+    .fil52 {fill:black;fill-rule:nonzero;fill-opacity:0.349020}
+    .fil43 {fill:#E36F20;fill-rule:nonzero;fill-opacity:0.349020}
+    .fil24 {fill:#10304E;fill-rule:nonzero;fill-opacity:0.400000}
+    .fil20 {fill:#E36F20;fill-rule:nonzero;fill-opacity:0.450980}
+    .fil44 {fill:#FF6F61;fill-rule:nonzero;fill-opacity:0.450980}
+    .fil29 {fill:#E5C9A0;fill-rule:nonzero;fill-opacity:0.501961}
+    .fil32 {fill:black;fill-rule:nonzero;fill-opacity:0.549020}
+    .fil48 {fill:#FFF4E0;fill-rule:nonzero;fill-opacity:0.549020}
+    .fil25 {fill:black;fill-rule:nonzero;fill-opacity:0.600000}
+    .fil18 {fill:white;fill-rule:nonzero;fill-opacity:0.600000}
+    .fil5 {fill:black;fill-rule:nonzero;fill-opacity:0.701961}
+    .fil45 {fill:#B24A12;fill-rule:nonzero;fill-opacity:0.701961}
+    .fil47 {fill:#F3D9B0;fill-rule:nonzero;fill-opacity:0.701961}
+    .fil16 {fill:white;fill-rule:nonzero;fill-opacity:0.701961}
+    .fil9 {fill:black;fill-rule:nonzero;fill-opacity:0.800000}
+    .fil17 {fill:white;fill-rule:nonzero;fill-opacity:0.800000}
+    .fil51 {fill:#FFF4E0;fill-rule:nonzero;fill-opacity:0.850980}
+    .fil8 {fill:url(#id0);fill-rule:nonzero}
+    .fil27 {fill:url(#id1);fill-rule:nonzero}
+    .fil30 {fill:url(#id2);fill-rule:nonzero}
+    .fil19 {fill:url(#id3);fill-rule:nonzero}
+    .fil42 {fill:url(#id4);fill-rule:nonzero}
+    .fil1 {fill:url(#id5);fill-rule:nonzero}
+    .fil53 {fill:url(#id6);fill-rule:nonzero}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="-3787.5" y1="30725" x2="-3787.5" y2="40250">
+   <stop offset="0" style="stop-opacity:1; stop-color:#F2D3A0"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#E6BE85"/>
+  </linearGradient>
+  <linearGradient id="id1" gradientUnits="objectBoundingBox" x1="1.69228e-14%" y1="0%" x2="1.69228e-14%" y2="100%">
+   <stop offset="0" style="stop-opacity:1; stop-color:#2D6AA3"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#1A4269"/>
+  </linearGradient>
+  <linearGradient id="id2" gradientUnits="objectBoundingBox" x1="0%" y1="6.87492e-15%" x2="0%" y2="100%">
+   <stop offset="0" style="stop-opacity:1; stop-color:#4DBB9C"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#2F967A"/>
+  </linearGradient>
+  <linearGradient id="id3" gradientUnits="objectBoundingBox" x1="0%" y1="0%" x2="0%" y2="100%">
+   <stop offset="0" style="stop-opacity:1; stop-color:#FFA25C"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#F27A2B"/>
+  </linearGradient>
+  <linearGradient id="id4" gradientUnits="userSpaceOnUse" xlink:href="#id3" x1="5737.5" y1="5325.01" x2="5737.5" y2="14850">
+  </linearGradient>
+  <radialGradient id="id5" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.791667 -0 -0 0.791667 2188 2776)" cx="10500" cy="13326" r="25400" fx="10500" fy="13326">
+   <stop offset="0" style="stop-opacity:1; stop-color:#FFFBF0"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#FFE6BF"/>
+  </radialGradient>
+  <radialGradient id="id6" gradientUnits="objectBoundingBox" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+   <stop offset="0" style="stop-opacity:0.901961; stop-color:#FFF4B0"/>
+   <stop offset="1" style="stop-opacity:0; stop-color:#FFF4B0"/>
+  </radialGradient>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
   <g id="bg">
-    <rect id="bg_rect" x="0" y="0" width="1080" height="1920" fill="#FFF4E0"/>
+   <rect id="bg_rect" class="fil0" x="-3787.5" y="-10550" width="28575" height="50800"/>
+   <rect id="bg_glow" class="fil1" x="-3787.5" y="-10550" width="28575" height="50800"/>
+   <g id="bg_wall">
+    <polygon id="bg_ray_1" class="fil2" points="10500,13262.5 -3787.5,-2612.5 -3787.5,4266.67 "/>
+    <polygon id="bg_ray_2" class="fil2" points="10500,13262.5 24787.5,-3935.42 24787.5,3208.33 "/>
+    <polygon id="bg_ray_3" class="fil3" points="10500,13262.5 4150,-10550 11029.17,-10550 "/>
+    <polygon id="bg_ray_4" class="fil4" points="10500,13262.5 16320.83,-10550 21612.5,-10550 "/>
+    <path id="bg_wall_line_1" class="fil5 str0" d="M-3787.5 20670.83l28575 0m-28575 0l0 0 0 0z"/>
+    <g>
+     <path id="bg_wall_line_2" class="fil6" d="M-3787.5 30725l28575 0 -28575 0zm0 0l0 0 0 0z"/>
+     <path id="_1" class="fil7 str1" d="M-3787.5 30725l28575 0m-28575 0l0 0 0 0z"/>
+    </g>
+   </g>
+   <g id="bg_floor">
+    <rect id="floor_base" class="fil8" x="-3787.5" y="30725" width="28575" height="9525"/>
+    <path id="floor_board_1" class="fil9 str2" d="M-3787.5 33370.83l28575 0m-28575 0l0 0 0 0z"/>
+    <path id="floor_board_2" class="fil9 str2" d="M-3787.5 36281.25l28575 0m-28575 0l0 0 0 0z"/>
+    <path id="floor_board_3" class="fil9 str2" d="M-3787.5 38662.5l28575 0m-28575 0l0 0 0 0z"/>
+    <path id="floor_joint_1" class="fil5 str3" d="M3091.67 30725l-1852.09 2645.83m14022.92 -2645.83l1058.33 2645.83m-8995.83 0l-1587.5 2910.42m13758.33 -2910.42l1322.92 2910.42m-20902.08 0l-1322.92 2381.25m13493.75 -2381.25l-793.75 2381.25m793.75 -2381.25l0 0 0 0z"/>
+    <path id="floor_shadow" class="fil10" d="M17379.16 30989.58c0,-496.82 -3079.9,-899.58 -6879.16,-899.58 -3799.26,0 -6879.16,402.76 -6879.16,899.58 0,496.82 3079.9,899.58 6879.16,899.58 3799.26,0 6879.16,-402.76 6879.16,-899.58z" filter="url(#filter_blur_soft)"/>
+   </g>
+   <g id="bg_props">
+    <g id="prop_cone_l">
+     <polygon id="prop_cone_l_body" class="fil11 str4" points="-347.92,31518.75 710.42,25962.5 1768.75,25962.5 2827.08,31518.75 "/>
+     <polygon id="prop_cone_l_stripe" class="fil0 str5" points="234.17,28608.33 2245,28608.33 2456.67,29666.67 22.5,29666.67 "/>
+     <path class="fil12 str6" d="M-797.71 31386.46l4074.58 0c116.89,-0.01 211.68,94.78 211.68,211.66l-0.01 264.59c0.01,116.87 -94.78,211.66 -211.66,211.66l-4074.59 0.01c-116.87,-0.01 -211.66,-94.8 -211.66,-211.68l-0.01 -264.57c0.01,-116.89 94.8,-211.68 211.68,-211.68z"/>
+    </g>
+    <g id="prop_cone_r">
+     <polygon id="prop_cone_r_body" class="fil11 str4" points="18172.92,31518.75 19231.25,25962.5 20289.58,25962.5 21347.92,31518.75 "/>
+     <polygon id="prop_cone_r_stripe" class="fil0 str5" points="18755,28608.33 20765.83,28608.33 20977.5,29666.67 18543.33,29666.67 "/>
+     <path class="fil12 str6" d="M17723.13 31386.46l4074.58 0c116.87,-0.01 211.66,94.78 211.66,211.66l0.01 264.59c-0.01,116.87 -94.8,211.66 -211.68,211.66l-4074.57 0.01c-116.89,-0.01 -211.68,-94.8 -211.68,-211.68l0.01 -264.57c-0.01,-116.89 94.78,-211.68 211.66,-211.68z"/>
+    </g>
+    <g id="prop_sign">
+     <rect id="prop_sign_post" class="fil13 str7" x="20686.46" y="19877.09" width="423.33" height="6614.58"/>
+     <polygon id="prop_sign_board" class="fil14 str4" points="18966.67,16172.92 22803.13,16172.92 22803.13,20141.67 18966.67,20141.67 "/>
+     <polygon id="prop_sign_mark" class="fil7 str4" points="20871.67,16966.67 22273.96,19480.21 19469.38,19480.21 "/>
+     <g>
+      <path id="prop_sign_excl" class="fil6" d="M20871.67 17760.42l0 846.66 0 -846.66zm0 0l0 0 0 0z"/>
+      <path id="_1_10" class="fil7 str8" d="M20871.67 17760.42l0 846.66m0 -846.66l0 0 0 0z"/>
+     </g>
+     <circle id="prop_sign_dot" class="fil15" cx="20871.67" cy="19003.96" r="132.29"/>
+    </g>
+    <g id="prop_dust">
+     <path id="dust_1" class="fil16" d="M-109.8 562.5c0,-131.51 -106.61,-238.12 -238.12,-238.12 -131.51,0 -238.12,106.61 -238.12,238.12 0,131.51 106.61,238.12 238.12,238.12 131.51,0 238.12,-106.61 238.12,-238.12z"/>
+     <path id="dust_2" class="fil16" d="M21930 3208.33c0,-175.35 -142.15,-317.5 -317.5,-317.5 -175.35,0 -317.5,142.15 -317.5,317.5 0,175.35 142.15,317.5 317.5,317.5 175.35,0 317.5,-142.15 317.5,-317.5z"/>
+     <path id="dust_3" class="fil17" d="M2192.08 9558.33c0,-87.68 -71.07,-158.75 -158.75,-158.75 -87.68,0 -158.75,71.07 -158.75,158.75 0,87.68 71.07,158.75 158.75,158.75 87.68,0 158.75,-71.07 158.75,-158.75z"/>
+     <path id="dust_4" class="fil17" d="M20210.21 9558.33c0,-102.29 -82.92,-185.21 -185.21,-185.21 -102.29,0 -185.21,82.92 -185.21,185.21 0,102.29 82.92,185.21 185.21,185.21 102.29,0 185.21,-82.92 185.21,-185.21z"/>
+     <path id="dust_5" class="fil18" d="M-1141.67 15908.33c0,-146.12 -118.46,-264.58 -264.58,-264.58 -146.12,0 -264.58,118.46 -264.58,264.58 0,146.12 118.46,264.58 264.58,264.58 146.12,0 264.58,-118.46 264.58,-264.58z"/>
+     <path id="dust_6" class="fil16" d="M22882.49 13262.5c0,-116.9 -94.76,-211.66 -211.66,-211.66 -116.9,0 -211.66,94.76 -211.66,211.66 0,116.9 94.76,211.66 211.66,211.66 116.9,0 211.66,-94.76 211.66,-211.66z"/>
+    </g>
+   </g>
   </g>
-
-  <!-- МАСКОТ ФИКСА -->
   <g id="mascot">
-
-    <!-- ХВОСТ -->
-    <g id="mascot_tail">
-      <path id="tail_body" d="M390 1120 C260 1080 210 980 250 890 C290 800 390 850 410 940 C425 1010 430 1080 420 1150 Z"
-            fill="#FF8A3D" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
-      <path id="tail_tip" d="M250 890 C280 840 330 835 360 865 C330 880 300 900 285 930 C270 930 255 915 250 890 Z"
-            fill="#FFF4E0" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
+   <g id="mascot_tail">
+    <path id="tail_body" class="fil19 str9" d="M6531.25 19083.33c-3439.58,-1058.33 -4762.5,-3704.16 -3704.17,-6085.41 1058.34,-2381.25 3704.17,-1058.34 4233.34,1322.91 396.87,1852.09 529.16,3704.17 264.58,5556.25l-793.75 -793.75z"/>
+    <path id="tail_tip" class="fil0 str9" d="M2827.08 12997.92c793.75,-1322.92 2116.67,-1455.21 2910.42,-661.46 -793.75,396.87 -1587.5,926.04 -1984.38,1719.79 -396.87,0 -793.75,-396.88 -926.04,-1058.33z"/>
+    <path id="tail_shade" class="fil20" d="M7192.71 14850c343.96,1587.5 449.79,3307.29 185.21,4974.17l-635 -687.92c211.66,-1375.83 105.83,-2963.33 -264.59,-4233.33l714.38 -52.92z"/>
+    <path id="tail_highlight" class="fil21 str10" d="M3144.58 13923.96c264.59,-1190.63 1005.42,-1666.88 1799.17,-1561.04"/>
+    <path id="tail_fur_1" class="fil22 str11" d="M4150 14850l582.08 317.5m-793.75 740.83l687.92 211.67m-476.25 846.67l687.92 52.91"/>
+    <path id="tail_fur_2" class="fil22 str11" d="M5340.62 17892.71l449.8 396.87m-264.59 -1587.5l582.09 211.67m-635 -1402.29l582.08 132.29"/>
+    <path id="tail_tip_fur" class="fil23 str12" d="M3753.12 14056.25l396.88 -211.67 -105.83 -423.33 423.33 -105.83m264.58 -476.25l423.34 -211.67m-2010.84 767.29l317.5 -185.21"/>
+   </g>
+   <g id="mascot_legs">
+    <path class="fil12 str13" d="M8383.33 22258.33l793.75 0c438.31,-0.01 793.76,355.44 793.76,793.74l-0.01 5556.26c0.01,438.29 -355.44,793.74 -793.74,793.74l-793.76 0.01c-438.29,-0.01 -793.74,-355.46 -793.74,-793.76l-0.01 -5556.24c0.01,-438.31 355.46,-793.76 793.76,-793.76z"/>
+    <path class="fil12 str13" d="M11822.92 22258.33l793.75 0c438.29,-0.01 793.74,355.44 793.74,793.74l0.01 5556.26c-0.01,438.29 -355.46,793.74 -793.76,793.74l-793.74 0.01c-438.31,-0.01 -793.76,-355.46 -793.76,-793.76l0.01 -5556.24c-0.01,-438.31 355.44,-793.76 793.74,-793.76z"/>
+    <path class="fil24" d="M9547.5 22390.63l0 0c175.33,-0.01 317.51,142.17 317.51,317.49l-0.01 6297.09c0.01,175.31 -142.17,317.49 -317.49,317.49l-0.01 0.01c-175.31,-0.01 -317.49,-142.19 -317.49,-317.51l-0.01 -6297.07c0.01,-175.33 142.19,-317.51 317.51,-317.51z"/>
+    <path class="fil24" d="M12987.08 22390.63l0 0c175.31,-0.01 317.49,142.17 317.49,317.49l0.01 6297.09c-0.01,175.31 -142.19,317.49 -317.51,317.49l0.01 0.01c-175.33,-0.01 -317.51,-142.19 -317.51,-317.51l0.01 -6297.07c-0.01,-175.33 142.17,-317.51 317.49,-317.51z"/>
+    <path id="leg_l_highlight" class="fil25 str14" d="M7907.08 22840.42l0 4709.58m0 -4709.58l0 0 0 0z"/>
+    <path id="leg_r_highlight" class="fil25 str14" d="M11346.67 22840.42l0 4709.58m0 -4709.58l0 0 0 0z"/>
+    <g>
+     <path id="leg_l_seam" class="fil6" d="M8780.21 23845.83l0 3704.17 0 -3704.17zm0 0l0 0 0 0z"/>
+     <path id="_1_11" class="fil7 str15" d="M8780.21 23845.83l0 3704.17m0 -3704.17l0 0 0 0z"/>
     </g>
-
-    <!-- НОГИ И ОБУВЬ -->
-    <g id="mascot_legs">
-      <rect id="leg_l" x="430" y="1240" width="90" height="270" rx="30" fill="#1F4E79" stroke="#222222" stroke-width="10"/>
-      <rect id="leg_r" x="560" y="1240" width="90" height="270" rx="30" fill="#1F4E79" stroke="#222222" stroke-width="10"/>
-
-      <path id="shoe_l" d="M405 1510 Q405 1565 470 1565 L515 1565 Q535 1565 535 1540 L535 1510 Q470 1480 405 1510 Z"
-            fill="#1F4E79" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
-      <path id="shoe_r" d="M675 1510 Q675 1565 610 1565 L565 1565 Q545 1565 545 1540 L545 1510 Q610 1480 675 1510 Z"
-            fill="#1F4E79" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
-
-      <circle id="paw_l_1" cx="445" cy="1535" r="12" fill="#FFF4E0"/>
-      <circle id="paw_l_2" cx="475" cy="1530" r="12" fill="#FFF4E0"/>
-      <circle id="paw_l_3" cx="505" cy="1535" r="12" fill="#FFF4E0"/>
-      <circle id="paw_r_1" cx="575" cy="1535" r="12" fill="#FFF4E0"/>
-      <circle id="paw_r_2" cx="605" cy="1530" r="12" fill="#FFF4E0"/>
-      <circle id="paw_r_3" cx="635" cy="1535" r="12" fill="#FFF4E0"/>
+    <g>
+     <path id="leg_r_seam" class="fil6" d="M12219.79 23845.83l0 3704.17 0 -3704.17zm0 0l0 0 0 0z"/>
+     <path id="_1_12" class="fil7 str15" d="M12219.79 23845.83l0 3704.17m0 -3704.17l0 0 0 0z"/>
     </g>
-
-    <!-- ТЕЛО, ЖИЛЕТ, РУБАШКА -->
-    <g id="mascot_body">
-      <path id="torso" d="M395 980 Q540 925 685 980 L705 1270 Q540 1320 375 1270 Z"
-            fill="#FF8A3D" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
-
-      <path id="shirt" d="M500 945 L580 945 L580 1280 L500 1280 Z"
-            fill="#FFF4E0" stroke="#222222" stroke-width="8" stroke-linejoin="round"/>
-
-      <path id="vest_l" d="M395 980 L520 960 L520 1280 L375 1270 Z"
-            fill="#3DAA8C" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
-      <path id="vest_r" d="M685 980 L560 960 L560 1280 L705 1270 Z"
-            fill="#3DAA8C" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
-
-      <path id="vest_stripe_l" d="M390 1130 L520 1130 L520 1154 L382 1154 Z" fill="#FFF4E0"/>
-      <path id="vest_stripe_r" d="M560 1130 L690 1130 L698 1154 L560 1154 Z" fill="#FFF4E0"/>
-
-      <path id="vest_pocket_l" d="M405 1190 L470 1190 L470 1235 L405 1235 Z"
-            fill="none" stroke="#222222" stroke-width="6" stroke-linejoin="round"/>
+    <rect id="leg_l_stripe" class="fil14 str16" x="7642.5" y="26359.38" width="2275.42" height="582.08"/>
+    <rect id="leg_r_stripe" class="fil14 str16" x="11082.08" y="26359.38" width="2275.42" height="582.08"/>
+    <polygon id="leg_l_pocket" class="fil7 str17" points="7854.17,23184.38 9071.25,23184.38 9071.25,24375 7854.17,24375 "/>
+    <polygon id="leg_r_pocket" class="fil7 str17" points="11293.75,23184.38 12510.83,23184.38 12510.83,24375 11293.75,24375 "/>
+    <path class="fil26 str6" d="M7748.33 28396.67l2063.75 0c146.11,-0.01 264.59,118.47 264.59,264.57l0 264.59c0,146.09 -118.48,264.57 -264.58,264.57l-2063.76 0.02c-146.09,-0.02 -264.57,-118.5 -264.57,-264.6l-0.01 -264.57c0.01,-146.11 118.49,-264.59 264.59,-264.59z"/>
+    <path class="fil26 str6" d="M11187.92 28396.67l2063.75 0c146.09,-0.01 264.57,118.47 264.57,264.57l0.01 264.59c-0.01,146.09 -118.49,264.57 -264.59,264.57l-2063.74 0.02c-146.11,-0.02 -264.59,-118.5 -264.59,-264.6l0 -264.57c0,-146.11 118.48,-264.59 264.58,-264.59z"/>
+    <path id="shoe_l" class="fil27 str9" d="M6928.12 29402.08c0,970.14 573.27,1455.21 1719.8,1455.21l1190.62 0c352.78,0 529.17,-220.48 529.17,-661.46l0 -793.75c-1146.53,-529.16 -2293.06,-529.16 -3439.59,0z"/>
+    <path id="shoe_r" class="fil27 str9" d="M14071.88 29402.08c0,970.14 -573.27,1455.21 -1719.8,1455.21l-1190.62 0c-352.78,0 -529.17,-220.48 -529.17,-661.46l0 -793.75c1146.53,-529.16 2293.06,-529.16 3439.59,0z"/>
+    <path id="shoe_l_sole" class="fil0 str18" d="M6954.58 30407.5c70.56,352.78 635,529.17 1693.34,529.17l1190.62 0c388.06,0 573.27,-176.39 555.63,-529.17l-3439.59 0z"/>
+    <path id="shoe_r_sole" class="fil0 str18" d="M14045.42 30407.5c-70.56,352.78 -635,529.17 -1693.34,529.17l-1190.62 0c-388.06,0 -573.27,-176.39 -555.63,-529.17l3439.59 0z"/>
+    <circle id="paw_l_1" class="fil0" cx="7986.46" cy="30063.54" r="317.5"/>
+    <circle id="paw_l_2" class="fil0" cx="8780.21" cy="29931.25" r="317.5"/>
+    <circle id="paw_l_3" class="fil0" cx="9573.96" cy="30063.54" r="317.5"/>
+    <circle id="paw_r_1" class="fil0" cx="11426.04" cy="30063.54" r="317.5"/>
+    <circle id="paw_r_2" class="fil0" cx="12219.79" cy="29931.25" r="317.5"/>
+    <circle id="paw_r_3" class="fil0" cx="13013.54" cy="30063.54" r="317.5"/>
+    <path id="shoe_l_laces" class="fil7 str19" d="M8251.04 29007.5l793.75 264.58m-793.75 105.84l793.75 264.58"/>
+    <path id="shoe_r_laces" class="fil7 str19" d="M12748.96 29007.5l-793.75 264.58m793.75 105.84l-793.75 264.58"/>
+    <path id="shoe_l_highlight" class="fil28 str20" d="M7272.08 29764.05c176.39,-246.94 476.25,-405.69 899.59,-476.25"/>
+    <path id="shoe_r_highlight" class="fil28 str20" d="M13727.92 29764.05c-176.39,-246.94 -476.25,-405.69 -899.59,-476.25"/>
+   </g>
+   <g id="mascot_body">
+    <path id="torso" class="fil19 str9" d="M6663.54 15379.17c2557.64,-970.14 5115.28,-970.14 7672.92,0l529.17 7672.91c-2910.42,881.95 -5820.84,881.95 -8731.26,0l529.17 -7672.91z"/>
+    <path id="torso_belly_fur" class="fil23 str12" d="M7325 23105l317.5 529.17 370.42 -423.34 370.41 582.09 423.34 -476.25 423.33 529.16 423.33 -476.25m1693.34 0l423.33 476.25 423.33 -529.16 423.34 476.25 370.41 -582.09 370.42 423.34 317.5 -529.17"/>
+    <polygon id="shirt" class="fil0 str4" points="9441.67,14453.12 11558.33,14453.12 11558.33,23316.67 9441.67,23316.67 "/>
+    <polygon id="shirt_collar_l" class="fil0 str5" points="9441.67,14453.12 10500,16120 9441.67,16384.58 "/>
+    <polygon id="shirt_collar_r" class="fil0 str5" points="11558.33,14453.12 10500,16120 11558.33,16384.58 "/>
+    <polygon id="shirt_tie_knot" class="fil12 str21" points="10129.58,16067.08 10870.42,16067.08 10764.58,16702.08 10235.42,16702.08 "/>
+    <polygon id="shirt_tie" class="fil12 str21" points="10235.42,16702.08 10764.58,16702.08 10976.25,20141.67 10500,20803.13 10023.75,20141.67 "/>
+    <g>
+     <path id="shirt_tie_stripe" class="fil6" d="M10156.04 17892.71l687.92 0 -687.92 0zm-52.92 793.75l793.76 0 -793.76 0zm-26.45 793.75l846.66 0 -846.66 0zm0 0l0 0 0 0z"/>
+     <path id="_1_13" class="fil7 str22" d="M10156.04 17892.71l687.92 0m-740.84 793.75l793.76 0m-820.21 793.75l846.66 0m-846.66 0l0 0 0 0z"/>
     </g>
-
-    <!-- РУКИ: НАБОР ПОЗ (активна одна) -->
-    <g id="mascot_arms">
-
-      <!-- ПОЗА 1: ПО УМОЛЧАНИЮ (левая с блокнотом, правая поднята) -->
-      <g id="arms_pose_default" style="display:inline">
-        <!-- Левая рука с блокнотом -->
-        <g id="arm_l_default">
-          <path id="arm_l_outline" d="M415 1020 C360 1060 330 1140 340 1235"
-                fill="none" stroke="#222222" stroke-width="70" stroke-linecap="round"/>
-          <path id="arm_l_fill" d="M415 1020 C360 1060 330 1140 340 1235"
-                fill="none" stroke="#FF8A3D" stroke-width="50" stroke-linecap="round"/>
-
-          <circle id="hand_l_default" cx="345" cy="1245" r="42" fill="#FF8A3D" stroke="#222222" stroke-width="10"/>
-
-          <g id="notebook_default">
-            <rect id="notebook_body" x="285" y="1225" width="120" height="160" rx="12"
-                  fill="#FFF4E0" stroke="#222222" stroke-width="10"/>
-            <rect id="notebook_spine" x="285" y="1225" width="18" height="160" rx="6"
-                  fill="#3DAA8C" stroke="#222222" stroke-width="6"/>
-            <path id="notebook_line_1" d="M325 1265 L380 1265" stroke="#222222" stroke-width="6" stroke-linecap="round"/>
-            <path id="notebook_line_2" d="M325 1295 L380 1295" stroke="#222222" stroke-width="6" stroke-linecap="round"/>
-            <path id="notebook_line_3" d="M325 1325 L365 1325" stroke="#222222" stroke-width="6" stroke-linecap="round"/>
-            <rect id="notebook_pen" x="372" y="1238" width="12" height="70" rx="6"
-                  fill="#FF8A3D" stroke="#222222" stroke-width="6"/>
-          </g>
-        </g>
-
-        <!-- Правая рука поднята -->
-        <g id="arm_r_default">
-          <path id="arm_r_outline" d="M665 1020 C720 980 760 900 780 800"
-                fill="none" stroke="#222222" stroke-width="70" stroke-linecap="round"/>
-          <path id="arm_r_fill" d="M665 1020 C720 980 760 900 780 800"
-                fill="none" stroke="#FF8A3D" stroke-width="50" stroke-linecap="round"/>
-
-          <circle id="hand_r_default" cx="790" cy="780" r="45" fill="#FF8A3D" stroke="#222222" stroke-width="10"/>
-          <path id="finger_r_default" d="M800 750 L800 650 Q800 625 820 625 Q840 625 840 650 L840 750"
-                fill="#FF8A3D" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
-          <path id="thumb_r_default" d="M760 765 Q735 750 730 725 Q728 710 742 708 Q756 706 765 725"
-                fill="#FF8A3D" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
-        </g>
-      </g>
-
-      <!-- ПОЗА 2: РУКИ ОПУЩЕНЫ -->
-      <g id="arms_pose_down" style="display:none">
-        <g id="arm_l_down">
-          <path id="arm_l_down_outline" d="M415 1020 C380 1080 370 1180 375 1280"
-                fill="none" stroke="#222222" stroke-width="70" stroke-linecap="round"/>
-          <path id="arm_l_down_fill" d="M415 1020 C380 1080 370 1180 375 1280"
-                fill="none" stroke="#FF8A3D" stroke-width="50" stroke-linecap="round"/>
-          <circle id="hand_l_down" cx="375" cy="1295" r="42" fill="#FF8A3D" stroke="#222222" stroke-width="10"/>
-        </g>
-        <g id="arm_r_down">
-          <path id="arm_r_down_outline" d="M665 1020 C700 1080 710 1180 705 1280"
-                fill="none" stroke="#222222" stroke-width="70" stroke-linecap="round"/>
-          <path id="arm_r_down_fill" d="M665 1020 C700 1080 710 1180 705 1280"
-                fill="none" stroke="#FF8A3D" stroke-width="50" stroke-linecap="round"/>
-          <circle id="hand_r_down" cx="705" cy="1295" r="42" fill="#FF8A3D" stroke="#222222" stroke-width="10"/>
-        </g>
-      </g>
-
-      <!-- ПОЗА 3: ЛЕВАЯ РУКА ПОКАЗЫВАЕТ ВПЕРЁД, ПРАВАЯ С БЛОКНОТОМ -->
-      <g id="arms_pose_point_left" style="display:none">
-        <!-- Левая рука указывает -->
-        <g id="arm_l_point">
-          <path id="arm_l_point_outline" d="M415 1020 C350 980 280 950 220 930"
-                fill="none" stroke="#222222" stroke-width="70" stroke-linecap="round"/>
-          <path id="arm_l_point_fill" d="M415 1020 C350 980 280 950 220 930"
-                fill="none" stroke="#FF8A3D" stroke-width="50" stroke-linecap="round"/>
-          <circle id="hand_l_point" cx="210" cy="920" r="45" fill="#FF8A3D" stroke="#222222" stroke-width="10"/>
-          <path id="finger_l_point" d="M190 920 L100 880 Q80 870 85 855 Q90 840 110 850 L200 890"
-                fill="#FF8A3D" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
-        </g>
-        <!-- Правая рука с блокнотом -->
-        <g id="arm_r_notebook">
-          <path id="arm_r_notebook_outline" d="M665 1020 C700 1100 720 1180 730 1250"
-                fill="none" stroke="#222222" stroke-width="70" stroke-linecap="round"/>
-          <path id="arm_r_notebook_fill" d="M665 1020 C700 1100 720 1180 730 1250"
-                fill="none" stroke="#FF8A3D" stroke-width="50" stroke-linecap="round"/>
-          <circle id="hand_r_notebook" cx="735" cy="1265" r="42" fill="#FF8A3D" stroke="#222222" stroke-width="10"/>
-          <g id="notebook_right">
-            <rect id="notebook_right_body" x="690" y="1240" width="120" height="160" rx="12"
-                  fill="#FFF4E0" stroke="#222222" stroke-width="10"/>
-            <rect id="notebook_right_spine" x="690" y="1240" width="18" height="160" rx="6"
-                  fill="#3DAA8C" stroke="#222222" stroke-width="6"/>
-            <path id="notebook_right_line_1" d="M730 1280 L785 1280" stroke="#222222" stroke-width="6" stroke-linecap="round"/>
-            <path id="notebook_right_line_2" d="M730 1310 L785 1310" stroke="#222222" stroke-width="6" stroke-linecap="round"/>
-            <path id="notebook_right_line_3" d="M730 1340 L770 1340" stroke="#222222" stroke-width="6" stroke-linecap="round"/>
-            <rect id="notebook_right_pen" x="777" y="1253" width="12" height="70" rx="6"
-                  fill="#FF8A3D" stroke="#222222" stroke-width="6"/>
-          </g>
-        </g>
-      </g>
-
-      <!-- ПОЗА 4: ОБЕ РУКИ ВВЕРХ / ПРИВЕТСТВИЕ -->
-      <g id="arms_pose_wave" style="display:none">
-        <g id="arm_l_wave">
-          <path id="arm_l_wave_outline" d="M415 1020 C360 950 320 880 310 800"
-                fill="none" stroke="#222222" stroke-width="70" stroke-linecap="round"/>
-          <path id="arm_l_wave_fill" d="M415 1020 C360 950 320 880 310 800"
-                fill="none" stroke="#FF8A3D" stroke-width="50" stroke-linecap="round"/>
-          <circle id="hand_l_wave" cx="305" cy="780" r="45" fill="#FF8A3D" stroke="#222222" stroke-width="10"/>
-          <path id="finger_l_wave" d="M300 740 L300 640 Q300 615 320 615 Q340 615 340 640 L340 740"
-                fill="#FF8A3D" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
-        </g>
-        <g id="arm_r_wave">
-          <path id="arm_r_wave_outline" d="M665 1020 C720 950 760 880 770 800"
-                fill="none" stroke="#222222" stroke-width="70" stroke-linecap="round"/>
-          <path id="arm_r_wave_fill" d="M665 1020 C720 950 760 880 770 800"
-                fill="none" stroke="#FF8A3D" stroke-width="50" stroke-linecap="round"/>
-          <circle id="hand_r_wave" cx="775" cy="780" r="45" fill="#FF8A3D" stroke="#222222" stroke-width="10"/>
-          <path id="finger_r_wave" d="M780 740 L780 640 Q780 615 800 615 Q820 615 820 640 L820 740"
-                fill="#FF8A3D" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
-        </g>
-      </g>
-
+    <circle id="shirt_button_1" class="fil15" cx="10500" cy="21596.88" r="158.75"/>
+    <circle id="shirt_button_2" class="fil15" cx="10500" cy="22390.63" r="158.75"/>
+    <polygon id="shirt_shade" class="fil29" points="10923.33,15908.33 11558.33,15908.33 11558.33,23316.67 10923.33,23316.67 "/>
+    <polygon id="vest_l" class="fil30 str9" points="6663.54,15379.17 9970.83,14850 9970.83,23316.67 6134.37,23052.08 "/>
+    <polygon id="vest_r" class="fil30 str9" points="14336.46,15379.17 11029.17,14850 11029.17,23316.67 14865.63,23052.08 "/>
+    <polygon id="vest_stripe_l" class="fil0" points="6531.25,19347.92 9970.83,19347.92 9970.83,19982.92 6319.58,19982.92 "/>
+    <polygon id="vest_stripe_r" class="fil0" points="11029.17,19347.92 14468.75,19347.92 14680.42,19982.92 11029.17,19982.92 "/>
+    <polygon id="vest_pocket_l" class="fil7 str5" points="6928.12,20935.42 8647.92,20935.42 8647.92,22126.04 6928.12,22126.04 "/>
+    <polygon id="vest_shade_l" class="fil31" points="6134.37,23052.08 6663.54,15379.17 7325,15246.88 6928.12,23184.38 "/>
+    <polygon id="vest_shade_r" class="fil31" points="14865.63,23052.08 14336.46,15379.17 13675,15246.88 14071.88,23184.38 "/>
+    <path id="vest_highlight_l" class="fil32 str23" d="M8647.92 15511.46l52.91 3307.29m-52.91 -3307.29l0 0 0 0z"/>
+    <path id="vest_highlight_r" class="fil32 str23" d="M12352.08 15511.46l-52.91 3307.29m52.91 -3307.29l0 0 0 0z"/>
+    <g>
+     <path id="vest_seam_l" class="fil6" d="M9759.17 15114.58l0 7990.42 0 -7990.42zm0 0l0 0 0 0z"/>
+     <path id="_1_14" class="fil7 str24" d="M9759.17 15114.58l0 7990.42m0 -7990.42l0 0 0 0z"/>
     </g>
-
-    <!-- ГОЛОВА, УШИ, МОРДА -->
-    <g id="mascot_head">
-      <polygon id="ear_l" points="390,660 330,420 510,560" fill="#FF8A3D" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
-      <polygon id="ear_l_inner" points="405,640 365,480 475,565" fill="#FFF4E0" stroke="#222222" stroke-width="8" stroke-linejoin="round"/>
-
-      <polygon id="ear_r" points="690,660 750,420 570,560" fill="#FF8A3D" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
-      <polygon id="ear_r_inner" points="675,640 715,480 605,565" fill="#FFF4E0" stroke="#222222" stroke-width="8" stroke-linejoin="round"/>
-
-      <circle id="head_base" cx="540" cy="780" r="180" fill="#FF8A3D" stroke="#222222" stroke-width="10"/>
-
-      <path id="muzzle" d="M420 800 Q540 900 660 800 Q660 900 540 915 Q420 900 420 800 Z"
-            fill="#FFF4E0" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
-
-      <circle id="eye_l" cx="475" cy="760" r="32" fill="#222222"/>
-      <circle id="eye_l_highlight" cx="486" cy="748" r="10" fill="#FFF4E0"/>
-      <circle id="eye_r" cx="605" cy="760" r="32" fill="#222222"/>
-      <circle id="eye_r_highlight" cx="616" cy="748" r="10" fill="#FFF4E0"/>
-
-      <!-- БРОВИ: НАБОР (активна одна) -->
-      <g id="mascot_eyebrows">
-        <!-- По умолчанию: приподнятые -->
-        <g id="eyebrows_default" style="display:inline">
-          <path id="eyebrow_l_default" d="M435 710 Q475 690 515 710" fill="none" stroke="#222222" stroke-width="10" stroke-linecap="round"/>
-          <path id="eyebrow_r_default" d="M565 710 Q605 690 645 710" fill="none" stroke="#222222" stroke-width="10" stroke-linecap="round"/>
-        </g>
-        <!-- Выше -->
-        <g id="eyebrows_high" style="display:none">
-          <path id="eyebrow_l_high" d="M435 690 Q475 665 515 690" fill="none" stroke="#222222" stroke-width="10" stroke-linecap="round"/>
-          <path id="eyebrow_r_high" d="M565 690 Q605 665 645 690" fill="none" stroke="#222222" stroke-width="10" stroke-linecap="round"/>
-        </g>
-        <!-- Ниже / нахмуренные -->
-        <g id="eyebrows_low" style="display:none">
-          <path id="eyebrow_l_low" d="M435 730 Q475 745 515 730" fill="none" stroke="#222222" stroke-width="10" stroke-linecap="round"/>
-          <path id="eyebrow_r_low" d="M565 730 Q605 745 645 730" fill="none" stroke="#222222" stroke-width="10" stroke-linecap="round"/>
-        </g>
-      </g>
-
-      <circle id="nose" cx="540" cy="815" r="16" fill="#222222"/>
-
-      <!-- РОТ: НАБОР (активен один) -->
-      <g id="mascot_mouth">
-        <!-- По умолчанию: нейтральная улыбка -->
-        <g id="mouth_neutral" style="display:inline">
-          <path id="mouth_left" d="M540 830 Q520 860 500 850" fill="none" stroke="#222222" stroke-width="8" stroke-linecap="round"/>
-          <path id="mouth_right" d="M540 830 Q560 860 580 850" fill="none" stroke="#222222" stroke-width="8" stroke-linecap="round"/>
-          <path id="mouth_center" d="M540 830 L540 852" fill="none" stroke="#222222" stroke-width="8" stroke-linecap="round"/>
-        </g>
-        <!-- Открытый рот (улыбка) -->
-        <g id="mouth_open" style="display:none">
-          <path id="mouth_open_shape" d="M490 840 Q540 900 590 840 Q540 870 490 840 Z"
-                fill="#222222" stroke="#222222" stroke-width="6" stroke-linejoin="round"/>
-          <path id="mouth_open_tongue" d="M510 855 Q540 880 570 855 Q540 870 510 855 Z"
-                fill="#FF8A3D" stroke="none"/>
-        </g>
-        <!-- Удивлённый рот (O) -->
-        <g id="mouth_surprised" style="display:none">
-          <ellipse id="mouth_surprised_shape" cx="540" cy="850" rx="22" ry="28"
-                   fill="#222222" stroke="#222222" stroke-width="6"/>
-          <ellipse id="mouth_surprised_inner" cx="540" cy="845" rx="10" ry="14"
-                   fill="#FFF4E0" stroke="none"/>
-        </g>
-      </g>
+    <g>
+     <path id="vest_seam_r" class="fil6" d="M11240.83 15114.58l0 7990.42 0 -7990.42zm0 0l0 0 0 0z"/>
+     <path id="_1_15" class="fil7 str24" d="M11240.83 15114.58l0 7990.42m0 -7990.42l0 0 0 0z"/>
     </g>
-
-    <!-- КАСКА -->
-    <g id="mascot_helmet">
-      <path id="helmet_dome" d="M350 650 Q355 500 540 495 Q725 500 730 650 Z"
-            fill="#1F4E79" stroke="#222222" stroke-width="10" stroke-linejoin="round"/>
-      <rect id="helmet_brim" x="315" y="635" width="450" height="60" rx="30"
-            fill="#1F4E79" stroke="#222222" stroke-width="10"/>
-      <rect id="helmet_band" x="350" y="610" width="380" height="35" rx="15"
-            fill="#1F4E79" stroke="#222222" stroke-width="8"/>
-
-      <circle id="helmet_lamp_outer" cx="540" cy="560" r="34" fill="#FFF4E0" stroke="#222222" stroke-width="10"/>
-      <circle id="helmet_lamp_inner" cx="540" cy="560" r="16" fill="#FF8A3D" stroke="#222222" stroke-width="6"/>
-
-      <rect id="helmet_badge" x="640" y="550" width="40" height="50" rx="8"
-            fill="#3DAA8C" stroke="#222222" stroke-width="8"/>
-
-      <path id="helmet_ridge" d="M400 620 Q540 590 680 620" fill="none" stroke="#FFF4E0" stroke-width="8" stroke-linecap="round"/>
+    <path id="vest_stripe_l_edge" class="fil32 str25" d="M6531.25 19347.92l3439.58 0m-3651.25 635l3651.25 0m-3651.25 0l0 0 0 0z"/>
+    <path id="vest_stripe_r_edge" class="fil32 str25" d="M11029.17 19347.92l3439.58 0m-3439.58 635l3651.25 0m-3651.25 0l0 0 0 0z"/>
+    <polygon id="vest_pocket_l_flap" class="fil33 str5" points="6928.12,20935.42 8647.92,20935.42 8647.92,21411.67 7774.79,21570.42 6928.12,21411.67 "/>
+    <circle id="vest_pocket_l_button" class="fil0 str26" cx="7774.79" cy="21411.67" r="132.29"/>
+    <polygon id="vest_pocket_r" class="fil7 str5" points="12352.08,20935.42 14071.88,20935.42 14071.88,22126.04 12352.08,22126.04 "/>
+    <polygon id="vest_pocket_r_flap" class="fil33 str5" points="12352.08,20935.42 14071.88,20935.42 14071.88,21411.67 13198.75,21570.42 12352.08,21411.67 "/>
+    <circle id="vest_pocket_r_button" class="fil0 str26" cx="13198.75" cy="21411.67" r="132.29"/>
+    <g id="vest_name_tag">
+     <path class="fil0 str7" d="M12219.79 16437.5l1481.67 0c102.26,-0.01 185.2,82.93 185.2,185.2l0.01 740.84c-0.01,102.26 -82.95,185.2 -185.22,185.2l-1481.66 0.01c-102.28,-0.01 -185.22,-82.95 -185.22,-185.22l0.01 -740.82c-0.01,-102.28 82.93,-185.22 185.2,-185.22z"/>
+     <g>
+      <path id="vest_name_tag_line_1" class="fil6" d="M12352.08 16807.92l1217.09 0 -1217.09 0zm0 0l0 0 0 0z"/>
+      <path id="_1_16" class="fil7 str27" d="M12352.08 16807.92l1217.09 0m-1217.09 0l0 0 0 0z"/>
+     </g>
+     <g>
+      <path id="vest_name_tag_line_2" class="fil6" d="M12352.08 17178.33l793.75 0 -793.75 0zm0 0l0 0 0 0z"/>
+      <path id="_1_17" class="fil7 str28" d="M12352.08 17178.33l793.75 0m-793.75 0l0 0 0 0z"/>
+     </g>
     </g>
-
+    <g id="vest_pen_holder">
+     <path class="fil33 str16" d="M7457.29 16702.08l317.5 0c73.06,0 132.3,59.24 132.3,132.29l-0.01 952.51c0.01,73.04 -59.23,132.28 -132.28,132.28l-317.51 0.01c-73.04,-0.01 -132.28,-59.25 -132.28,-132.3l-0.01 -952.49c0.01,-73.06 59.25,-132.3 132.3,-132.3z"/>
+     <path class="fil14 str26" d="M7510.21 16225.83l0 0c43.84,-0.01 79.39,35.54 79.39,79.37l-0.02 899.59c0.02,43.82 -35.53,79.37 -79.36,79.37l-0.01 0.01c-43.82,-0.01 -79.37,-35.56 -79.37,-79.39l-0.01 -899.57c0.01,-43.84 35.56,-79.39 79.39,-79.39z"/>
+     <path class="fil11 str26" d="M7748.33 16331.67l0 0c43.84,-0.02 79.39,35.53 79.39,79.36l-0.01 793.76c0.01,43.82 -35.54,79.37 -79.37,79.37l-0.01 0.01c-43.82,-0.01 -79.37,-35.56 -79.37,-79.39l0 -793.74c0,-43.84 35.55,-79.39 79.38,-79.39z"/>
+    </g>
+    <path id="vest_hem_shade" class="fil34" d="M6213.75 22840.42c2857.5,881.94 5715,881.94 8572.5,0l52.92 264.58c-2892.78,881.94 -5785.56,881.94 -8678.34,0l52.92 -264.58z"/>
+   </g>
+   <g id="mascot_arms">
+    <g id="arms_pose_default">
+     <g id="arm_l_default">
+      <path id="arm_l_outline" class="fil7 str29" d="M7192.71 16437.5c-1455.21,1058.33 -2248.96,3175 -1984.38,5688.54"/>
+      <path id="arm_l_fill" class="fil7 str30" d="M7192.71 16437.5c-1455.21,1058.33 -2248.96,3175 -1984.38,5688.54"/>
+      <path id="arm_l_shade" class="fil35 str31" d="M7457.29 16649.17c-1455.21,1058.33 -2248.96,3175 -1984.37,5688.54"/>
+      <path id="arm_l_highlight" class="fil23 str32" d="M6954.58 16225.83c-1455.21,1058.34 -2248.96,3175 -1984.37,5688.55"/>
+      <path id="arm_l_fur" class="fil36 str33" d="M7192.71 16437.5c-1455.21,1058.33 -2248.96,3175 -1984.38,5688.54"/>
+      <circle id="hand_l_default" class="fil11 str13" cx="5340.62" cy="22390.63" r="1111.25"/>
+      <path id="hand_l_default_highlight" class="fil22 str34" d="M4732.08 21993.75c141.11,-246.94 379.24,-370.42 714.38,-370.42"/>
+      <path id="hand_l_default_creases" class="fil36 str35" d="M5023.12 22893.33l0 396.88m423.34 -343.96l0 396.88m423.33 -476.25l0 343.95"/>
+      <g id="notebook_default">
+       <path class="fil37" d="M4282.29 22073.13l2540 0c175.33,-0.01 317.51,142.17 317.51,317.49l-0.01 3598.34c0.01,175.31 -142.17,317.49 -317.49,317.49l-2540.01 0.01c-175.31,-0.01 -317.49,-142.19 -317.49,-317.51l-0.01 -3598.32c0.01,-175.33 142.19,-317.51 317.51,-317.51z"/>
+       <path class="fil0 str13" d="M4070.62 21861.46l2540.01 0c175.33,-0.01 317.51,142.17 317.51,317.49l-0.02 3598.34c0.02,175.31 -142.16,317.49 -317.48,317.49l-2540.02 0.01c-175.31,-0.01 -317.49,-142.19 -317.49,-317.51l-0.01 -3598.32c0.01,-175.33 142.19,-317.51 317.51,-317.51z"/>
+       <path class="fil38 str7" d="M3911.87 21861.46l158.75 0c87.67,-0.01 158.76,71.08 158.76,158.74l-0.01 3915.84c0.01,87.65 -71.08,158.74 -158.74,158.74l-158.76 0.01c-87.65,-0.01 -158.74,-71.1 -158.74,-158.76l-0.01 -3915.82c0.01,-87.67 71.1,-158.76 158.76,-158.76z"/>
+       <path class="fil14 str26" d="M4917.29 22231.88l1428.75 0c58.45,-0.01 105.84,47.38 105.84,105.82l0 158.76c0,58.43 -47.39,105.82 -105.83,105.82l-1428.76 0.01c-58.43,-0.01 -105.82,-47.4 -105.82,-105.84l-0.01 -158.74c0.01,-58.45 47.4,-105.84 105.84,-105.84z"/>
+       <polygon id="notebook_bookmark" class="fil39 str36" points="6293.12,21861.46 6293.12,22761.04 6504.79,22575.83 6716.46,22761.04 6716.46,21861.46 "/>
+       <g>
+        <path id="notebook_line_1" class="fil6" d="M4811.46 22919.79l1455.21 0 -1455.21 0zm0 0l0 0 0 0z"/>
+        <path id="_1_18" class="fil7 str37" d="M4811.46 22919.79l1455.21 0m-1455.21 0l0 0 0 0z"/>
+       </g>
+       <g>
+        <path id="notebook_line_2" class="fil6" d="M4811.46 23713.54l1455.21 0 -1455.21 0zm0 0l0 0 0 0z"/>
+        <path id="_1_19" class="fil7 str37" d="M4811.46 23713.54l1455.21 0m-1455.21 0l0 0 0 0z"/>
+       </g>
+       <g>
+        <path id="notebook_line_3" class="fil6" d="M4811.46 24507.29l1058.33 0 -1058.33 0zm0 0l0 0 0 0z"/>
+        <path id="_1_20" class="fil7 str37" d="M4811.46 24507.29l1058.33 0m-1058.33 0l0 0 0 0z"/>
+       </g>
+       <path class="fil11 str7" d="M6213.75 22205.42l0 0c87.67,-0.01 158.76,71.08 158.76,158.74l-0.01 1534.59c0.01,87.65 -71.08,158.74 -158.74,158.74l-0.01 0.01c-87.65,-0.01 -158.74,-71.1 -158.74,-158.76l-0.01 -1534.57c0.01,-87.67 71.1,-158.76 158.76,-158.76z"/>
+       <g id="notebook_rings">
+        <circle id="notebook_ring_1" class="fil0 str26" cx="3991.25" cy="22655.21" r="132.29"/>
+        <circle id="notebook_ring_2" class="fil0 str26" cx="3991.25" cy="23713.54" r="132.29"/>
+        <circle id="notebook_ring_3" class="fil0 str26" cx="3991.25" cy="24771.88" r="132.29"/>
+        <circle id="notebook_ring_4" class="fil0 str26" cx="3991.25" cy="25830.21" r="132.29"/>
+       </g>
+       <polygon id="notebook_corner" class="fil40 str38" points="6346.04,26094.79 6928.12,25512.71 6928.12,26094.79 "/>
+       <polygon id="notebook_pen_tip" class="fil0 str38" points="6055,24057.5 6372.5,24057.5 6213.75,24427.92 "/>
+       <path class="fil15" d="M6187.29 22205.42l52.92 0c73.06,-0.01 132.3,59.23 132.3,132.28l-0.01 105.84c0.01,73.04 -59.23,132.28 -132.28,132.28l-52.93 0.01c-73.04,-0.01 -132.28,-59.25 -132.28,-132.3l-0.01 -105.82c0.01,-73.06 59.25,-132.3 132.3,-132.3z"/>
+      </g>
+     </g>
+     <g id="arm_r_default">
+      <path id="arm_r_outline" class="fil7 str29" d="M13807.29 16437.5c1455.21,-1058.33 2513.54,-3175 3042.71,-5820.83"/>
+      <path id="arm_r_fill" class="fil7 str30" d="M13807.29 16437.5c1455.21,-1058.33 2513.54,-3175 3042.71,-5820.83"/>
+      <path id="arm_r_shade" class="fil35 str31" d="M14071.88 16649.17c1455.2,-1058.34 2513.54,-3175 3042.7,-5820.84"/>
+      <path id="arm_r_highlight" class="fil23 str32" d="M13569.17 16225.83c1455.21,-1058.33 2513.54,-3175 3042.71,-5820.83"/>
+      <path id="arm_r_fur" class="fil36 str33" d="M13807.29 16437.5c1455.21,-1058.33 2513.54,-3175 3042.71,-5820.83"/>
+      <circle id="hand_r_default" class="fil11 str13" cx="17114.58" cy="10087.5" r="1190.62"/>
+      <path id="hand_r_default_highlight" class="fil22 str34" d="M16453.13 9664.17c158.75,-264.59 414.51,-405.7 767.29,-423.34"/>
+      <g>
+       <path id="thumb_r_default" class="fil11" d="M16279.63 10848.85c-440.97,-264.58 -705.55,-617.36 -793.75,-1058.33 -35.28,-264.58 70.56,-414.51 317.5,-449.79 246.95,-35.28 449.8,114.65 608.55,449.79l-132.3 1058.33zm0 0l0 0 0 0z"/>
+       <path id="_1_21" class="fil7 str9" d="M16279.63 10848.85c-440.97,-264.58 -705.55,-617.36 -793.75,-1058.33 -35.28,-264.58 70.56,-414.51 317.5,-449.79 246.95,-35.28 449.8,114.65 608.55,449.79m-132.3 1058.33l0 0 0 0z"/>
+      </g>
+      <path id="thumb_r_default_highlight" class="fil22 str34" d="M16067.97 10504.9c-246.95,-176.39 -388.06,-423.34 -423.34,-740.84"/>
+      <path id="thumb_r_default_claw" class="fil0 str38" d="M15750.47 9393.65c70.55,-176.39 194.02,-229.31 370.41,-158.75 -141.11,0 -264.58,52.91 -370.41,158.75z"/>
+     </g>
+    </g>
+    <g id="arms_pose_down">
+     <g id="arm_l_down">
+      <path id="arm_l_down_outline" class="fil7 str29" d="M7192.71 16437.5c-926.04,1587.5 -1190.63,4233.33 -1058.34,6879.17"/>
+      <path id="arm_l_down_fill" class="fil7 str30" d="M7192.71 16437.5c-926.04,1587.5 -1190.63,4233.33 -1058.34,6879.17"/>
+      <path id="arm_l_down_shade" class="fil35 str31" d="M7457.29 16649.17c-926.04,1587.5 -1190.62,4233.33 -1058.33,6879.16"/>
+      <path id="arm_l_down_highlight" class="fil23 str32" d="M6954.58 16225.83c-926.04,1587.5 -1190.62,4233.34 -1058.33,6879.17"/>
+      <path id="arm_l_down_fur" class="fil36 str33" d="M7192.71 16437.5c-926.04,1587.5 -1190.63,4233.33 -1058.34,6879.17"/>
+      <circle id="hand_l_down" class="fil11 str13" cx="6134.37" cy="23713.54" r="1111.25"/>
+      <path id="hand_l_down_highlight" class="fil22 str34" d="M5525.83 23316.67c141.11,-246.95 379.24,-370.42 714.38,-370.42"/>
+      <path id="hand_l_down_creases" class="fil36 str35" d="M5816.87 24216.25l0 396.88m423.34 -343.96l0 396.87m423.33 -476.25l0 343.96"/>
+     </g>
+     <g id="arm_r_down">
+      <path id="arm_r_down_outline" class="fil7 str29" d="M13807.29 16437.5c926.04,1587.5 1190.63,4233.33 1058.34,6879.17"/>
+      <path id="arm_r_down_fill" class="fil7 str30" d="M13807.29 16437.5c926.04,1587.5 1190.63,4233.33 1058.34,6879.17"/>
+      <path id="arm_r_down_shade" class="fil35 str31" d="M14071.88 16649.17c926.04,1587.5 1190.62,4233.33 1058.33,6879.16"/>
+      <path id="arm_r_down_highlight" class="fil23 str32" d="M13569.17 16225.83c926.04,1587.5 1190.62,4233.34 1058.33,6879.17"/>
+      <path id="arm_r_down_fur" class="fil36 str33" d="M13807.29 16437.5c926.04,1587.5 1190.63,4233.33 1058.34,6879.17"/>
+      <circle id="hand_r_down" class="fil11 str13" cx="14865.63" cy="23713.54" r="1111.25"/>
+      <path id="hand_r_down_highlight" class="fil22 str34" d="M14257.08 23316.67c141.11,-246.95 379.24,-370.42 714.38,-370.42"/>
+      <path id="hand_r_down_creases" class="fil36 str35" d="M14548.13 24216.25l0 396.88m423.33 -343.96l0 396.87m423.33 -476.25l0 343.96"/>
+     </g>
+    </g>
+    <g id="arms_pose_point_left">
+     <g id="arm_l_point">
+      <path id="arm_l_point_outline" class="fil7 str29" d="M7192.71 16437.5c-1719.79,-1058.33 -3571.88,-1852.08 -5159.38,-2381.25"/>
+      <path id="arm_l_point_fill" class="fil7 str30" d="M7192.71 16437.5c-1719.79,-1058.33 -3571.88,-1852.08 -5159.38,-2381.25"/>
+      <path id="arm_l_point_shade" class="fil35 str31" d="M7457.29 16649.17c-1719.79,-1058.34 -3571.87,-1852.09 -5159.37,-2381.25"/>
+      <path id="arm_l_point_highlight" class="fil23 str32" d="M6954.58 16225.83c-1719.79,-1058.33 -3571.87,-1852.08 -5159.37,-2381.25"/>
+      <path id="arm_l_point_fur" class="fil36 str33" d="M7192.71 16437.5c-1719.79,-1058.33 -3571.88,-1852.08 -5159.38,-2381.25"/>
+      <circle id="hand_l_point" class="fil11 str13" cx="1768.75" cy="13791.67" r="1190.62"/>
+      <path id="hand_l_point_highlight" class="fil22 str34" d="M1430.24 13014.91c276.41,-137.12 567.9,-117.93 874.43,57.55"/>
+      <g>
+       <path id="finger_l_point" class="fil11" d="M1430.24 13349.61l-1278.52 -892.52c-189.41,-148.76 -260.44,-334.69 -213.09,-557.83 47.35,-223.12 165.74,-260.31 355.15,-111.56l1278.52 892.52 -142.06 669.39zm0 0l0 0 0 0z"/>
+       <path id="_1_22" class="fil7 str9" d="M1430.24 13349.61l-1278.52 -892.52c-189.41,-148.76 -260.44,-334.69 -213.09,-557.83 47.35,-223.12 165.74,-260.31 355.15,-111.56l1278.52 892.52m-142.06 669.39l0 0 0 0z"/>
+      </g>
+      <line id="finger_l_point_highlight" class="fil22 str34" x1="1430.24" y1="13014.91" x2="322.19" y2= "12233.96" />
+      <path id="finger_l_point_claw" class="fil0 str38" d="M94.9 11966.21c-94.71,-193.39 -75.77,-282.63 56.82,-267.76 -56.82,89.25 -75.77,178.51 -56.82,267.76z"/>
+     </g>
+     <g id="arm_r_notebook">
+      <path id="arm_r_notebook_outline" class="fil7 str29" d="M13807.29 16437.5c926.04,2116.67 1455.21,4233.33 1719.79,6085.42"/>
+      <path id="arm_r_notebook_fill" class="fil7 str30" d="M13807.29 16437.5c926.04,2116.67 1455.21,4233.33 1719.79,6085.42"/>
+      <path id="arm_r_notebook_shade" class="fil35 str31" d="M14071.88 16649.17c926.04,2116.66 1455.2,4233.33 1719.79,6085.41"/>
+      <path id="arm_r_notebook_highlight" class="fil23 str32" d="M13569.17 16225.83c926.04,2116.67 1455.21,4233.34 1719.79,6085.42"/>
+      <path id="arm_r_notebook_fur" class="fil36 str33" d="M13807.29 16437.5c926.04,2116.67 1455.21,4233.33 1719.79,6085.42"/>
+      <circle id="hand_r_notebook" class="fil11 str13" cx="15659.38" cy="22919.79" r="1111.25"/>
+      <path id="hand_r_notebook_highlight" class="fil22 str34" d="M15050.83 22522.92c141.11,-246.95 379.24,-370.42 714.38,-370.42"/>
+      <path id="hand_r_notebook_creases" class="fil36 str35" d="M15341.88 23422.5l0 396.88m423.33 -343.96l0 396.87m423.33 -476.25l0 343.96"/>
+      <g id="notebook_right">
+       <path class="fil37" d="M14997.92 22470l2540 0c175.31,-0.01 317.49,142.17 317.49,317.49l0.01 3598.34c-0.01,175.31 -142.19,317.49 -317.51,317.49l-2539.99 0.01c-175.33,-0.01 -317.51,-142.19 -317.51,-317.51l0.01 -3598.32c-0.01,-175.33 142.17,-317.51 317.49,-317.51z"/>
+       <path class="fil0 str13" d="M14786.25 22258.33l2540 0c175.31,-0.01 317.49,142.17 317.49,317.49l0.01 3598.35c-0.01,175.31 -142.19,317.49 -317.51,317.49l-2539.99 0.01c-175.33,-0.01 -317.51,-142.19 -317.51,-317.51l0.01 -3598.33c-0.01,-175.33 142.17,-317.51 317.49,-317.51z"/>
+       <path class="fil38 str7" d="M14627.5 22258.33l158.75 0c87.65,-0.01 158.74,71.08 158.74,158.74l0.01 3915.85c-0.01,87.65 -71.1,158.74 -158.76,158.74l-158.74 0.01c-87.67,-0.01 -158.76,-71.1 -158.76,-158.76l0.01 -3915.83c-0.01,-87.67 71.08,-158.76 158.74,-158.76z"/>
+       <path class="fil14 str26" d="M15632.92 22628.75l1428.75 0c58.43,-0.01 105.82,47.38 105.82,105.82l0.01 158.76c-0.01,58.43 -47.4,105.82 -105.84,105.82l-1428.74 0.02c-58.45,-0.02 -105.84,-47.41 -105.84,-105.85l0 -158.74c0,-58.45 47.39,-105.84 105.83,-105.84z"/>
+       <polygon id="notebook_right_bookmark" class="fil39 str36" points="17008.75,22258.33 17008.75,23157.92 17220.42,22972.71 17432.08,23157.92 17432.08,22258.33 "/>
+       <g>
+        <path id="notebook_right_line_1" class="fil6" d="M15527.08 23316.67l1455.21 0 -1455.21 0zm0 0l0 0 0 0z"/>
+        <path id="_1_23" class="fil7 str37" d="M15527.08 23316.67l1455.21 0m-1455.21 0l0 0 0 0z"/>
+       </g>
+       <g>
+        <path id="notebook_right_line_2" class="fil6" d="M15527.08 24110.42l1455.21 0 -1455.21 0zm0 0l0 0 0 0z"/>
+        <path id="_1_24" class="fil7 str37" d="M15527.08 24110.42l1455.21 0m-1455.21 0l0 0 0 0z"/>
+       </g>
+       <g>
+        <path id="notebook_right_line_3" class="fil6" d="M15527.08 24904.17l1058.34 0 -1058.34 0zm0 0l0 0 0 0z"/>
+        <path id="_1_25" class="fil7 str37" d="M15527.08 24904.17l1058.34 0m-1058.34 0l0 0 0 0z"/>
+       </g>
+       <path class="fil11 str7" d="M16929.38 22602.29l0 0c87.65,-0.01 158.74,71.08 158.74,158.74l0.01 1534.6c-0.01,87.65 -71.1,158.74 -158.76,158.74l0.01 0.01c-87.67,-0.01 -158.76,-71.1 -158.76,-158.76l0.01 -1534.58c-0.01,-87.67 71.08,-158.76 158.74,-158.76z"/>
+       <g id="notebook_right_rings">
+        <circle id="notebook_right_ring_1" class="fil0 str26" cx="14706.88" cy="23052.08" r="132.29"/>
+        <circle id="notebook_right_ring_2" class="fil0 str26" cx="14706.88" cy="24110.42" r="132.29"/>
+        <circle id="notebook_right_ring_3" class="fil0 str26" cx="14706.88" cy="25168.75" r="132.29"/>
+        <circle id="notebook_right_ring_4" class="fil0 str26" cx="14706.88" cy="26227.08" r="132.29"/>
+       </g>
+       <polygon id="notebook_right_corner" class="fil40 str38" points="17061.67,26491.67 17643.75,25909.58 17643.75,26491.67 "/>
+       <polygon id="notebook_right_pen_tip" class="fil0 str38" points="16770.63,24454.38 17088.13,24454.38 16929.38,24824.79 "/>
+       <path class="fil15" d="M16902.92 22602.29l52.91 0c73.04,-0.01 132.28,59.23 132.28,132.28l0.02 105.85c-0.02,73.04 -59.26,132.28 -132.31,132.28l-52.9 0.01c-73.06,-0.01 -132.3,-59.25 -132.3,-132.3l0.01 -105.83c-0.01,-73.06 59.23,-132.3 132.28,-132.3z"/>
+      </g>
+     </g>
+    </g>
+    <g id="arms_pose_wave">
+     <g id="arm_l_wave">
+      <path id="arm_l_wave_outline" class="fil7 str29" d="M7192.71 16437.5c-1455.21,-1852.08 -2513.54,-3704.17 -2778.13,-5820.83"/>
+      <path id="arm_l_wave_fill" class="fil7 str30" d="M7192.71 16437.5c-1455.21,-1852.08 -2513.54,-3704.17 -2778.13,-5820.83"/>
+      <path id="arm_l_wave_shade" class="fil35 str31" d="M7457.29 16649.17c-1455.21,-1852.09 -2513.54,-3704.17 -2778.12,-5820.84"/>
+      <path id="arm_l_wave_highlight" class="fil23 str32" d="M6954.58 16225.83c-1455.21,-1852.08 -2513.54,-3704.16 -2778.12,-5820.83"/>
+      <path id="arm_l_wave_fur" class="fil36 str33" d="M7192.71 16437.5c-1455.21,-1852.08 -2513.54,-3704.17 -2778.13,-5820.83"/>
+      <circle id="hand_l_wave" class="fil11 str13" cx="4282.29" cy="10087.5" r="1190.62"/>
+      <path id="hand_l_wave_highlight" class="fil22 str34" d="M3620.83 9664.17c158.75,-264.59 423.34,-405.7 793.75,-423.34"/>
+      <path id="hand_l_wave_creases" class="fil36 str35" d="M3964.79 10616.67l0 423.33m423.33 -370.42l0 423.34m423.34 -502.71l0 396.87"/>
+     </g>
+     <g id="arm_r_wave">
+      <path id="arm_r_wave_outline" class="fil7 str29" d="M13807.29 16437.5c1455.21,-1852.08 2513.54,-3704.17 2778.13,-5820.83"/>
+      <path id="arm_r_wave_fill" class="fil7 str30" d="M13807.29 16437.5c1455.21,-1852.08 2513.54,-3704.17 2778.13,-5820.83"/>
+      <path id="arm_r_wave_shade" class="fil35 str31" d="M14071.88 16649.17c1455.2,-1852.09 2513.54,-3704.17 2778.12,-5820.84"/>
+      <path id="arm_r_wave_highlight" class="fil23 str32" d="M13569.17 16225.83c1455.21,-1852.08 2513.54,-3704.16 2778.12,-5820.83"/>
+      <path id="arm_r_wave_fur" class="fil36 str33" d="M13807.29 16437.5c1455.21,-1852.08 2513.54,-3704.17 2778.13,-5820.83"/>
+      <circle id="hand_r_wave" class="fil11 str13" cx="16717.71" cy="10087.5" r="1190.62"/>
+      <path id="hand_r_wave_highlight" class="fil22 str34" d="M16056.25 9664.17c158.75,-264.59 423.33,-405.7 793.75,-423.34"/>
+      <path id="hand_r_wave_creases" class="fil36 str35" d="M16400.21 10616.67l0 423.33m423.33 -370.42l0 423.34m423.34 -502.71l0 396.87"/>
+     </g>
+    </g>
+   </g>
+   <g id="mascot_head">
+    <polygon id="ear_l" class="fil19 str9" points="6531.25,6912.5 4943.75,562.5 9706.25,4266.67 "/>
+    <polygon id="ear_l_inner" class="fil0 str4" points="6928.12,6383.33 5869.79,2150 8780.21,4398.96 "/>
+    <path id="ear_l_fur" class="fil7 str39" d="M6398.96 5325l529.16 -396.88m-343.95 -529.16l687.91 -238.13m-1005.41 -555.62l582.08 -132.29m-793.75 -661.46l476.25 -79.38"/>
+    <polygon id="ear_l_tip" class="fil41 str38" points="4943.75,562.5 5340.62,1832.5 5949.17,1488.54 "/>
+    <polygon id="ear_r" class="fil19 str9" points="14468.75,6912.5 16056.25,562.5 11293.75,4266.67 "/>
+    <polygon id="ear_r_inner" class="fil0 str4" points="14071.88,6383.33 15130.21,2150 12219.79,4398.96 "/>
+    <path id="ear_r_fur" class="fil7 str39" d="M14601.04 5325l-529.16 -396.88m343.95 -529.16l-687.91 -238.13m1005.41 -555.62l-582.08 -132.29m793.75 -661.46l-476.25 -79.38"/>
+    <polygon id="ear_r_tip" class="fil41 str38" points="16056.25,562.5 15659.38,1832.5 15050.83,1488.54 "/>
+    <circle id="head_base" class="fil42 str13" cx="10500" cy="10087.5" r="4762.5"/>
+    <path id="head_shade_bottom" class="fil43" d="M6495 11799.98c2697.93,2204.86 5395.85,2204.86 8093.78,0 -245.27,1587.5 -1594.24,2557.64 -4046.89,2910.42 -2452.65,-352.78 -3801.62,-1322.92 -4046.89,-2910.42z"/>
+    <g>
+     <path id="head_cheek_fur_l" class="fil0" d="M5869.79 10616.67l-926.04 396.87 1005.42 529.17 -793.75 608.54 1243.54 264.58 -449.79 714.38 1375.83 -132.29 -1455.21 -2381.25zm0 0l0 0 0 0z"/>
+     <path id="_1_26" class="fil7 str4" d="M5869.79 10616.67l-926.04 396.87 1005.42 529.17 -793.75 608.54 1243.54 264.58 -449.79 714.38 1375.83 -132.29m-1455.21 -2381.25l0 0 0 0z"/>
+    </g>
+    <g>
+     <path id="head_cheek_fur_r" class="fil0" d="M15130.21 10616.67l926.04 396.87 -1005.42 529.17 793.75 608.54 -1243.54 264.58 449.79 714.38 -1375.83 -132.29 1455.21 -2381.25zm0 0l0 0 0 0z"/>
+     <path id="_1_27" class="fil7 str4" d="M15130.21 10616.67l926.04 396.87 -1005.42 529.17 793.75 608.54 -1243.54 264.58 449.79 714.38 -1375.83 -132.29m1455.21 -2381.25l0 0 0 0z"/>
+    </g>
+    <path id="head_blush_l" class="fil44" d="M8277.49 11013.54c0,-219.19 -307.99,-396.87 -687.91,-396.87 -379.92,0 -687.91,177.68 -687.91,396.87 0,219.19 307.99,396.87 687.91,396.87 379.92,0 687.91,-177.68 687.91,-396.87z"/>
+    <path id="head_blush_r" class="fil44" d="M14098.33 11013.54c0,-219.19 -307.99,-396.87 -687.91,-396.87 -379.92,0 -687.91,177.68 -687.91,396.87 0,219.19 307.99,396.87 687.91,396.87 379.92,0 687.91,-177.68 687.91,-396.87z"/>
+    <path id="head_highlight" class="fil21 str40" d="M6398.96 8896.87c123.47,-793.75 520.35,-1411.11 1190.62,-1852.08"/>
+    <g id="head_freckles">
+     <path id="freckle_l_1" class="fil45" d="M8264.27 10616.67c0,-51.14 -41.46,-92.6 -92.6,-92.6 -51.14,0 -92.6,41.46 -92.6,92.6 0,51.14 41.46,92.6 92.6,92.6 51.14,0 92.6,-41.46 92.6,-92.6z"/>
+     <path id="freckle_l_2" class="fil45" d="M7854.16 10352.08c0,-43.83 -35.54,-79.37 -79.37,-79.37 -43.83,0 -79.37,35.54 -79.37,79.37 0,43.83 35.54,79.37 79.37,79.37 43.83,0 79.37,-35.54 79.37,-79.37z"/>
+     <path id="freckle_l_3" class="fil45" d="M8409.79 10960.62c0,-43.83 -35.54,-79.37 -79.37,-79.37 -43.83,0 -79.37,35.54 -79.37,79.37 0,43.83 35.54,79.37 79.37,79.37 43.83,0 79.37,-35.54 79.37,-79.37z"/>
+     <path id="freckle_r_1" class="fil45" d="M12920.93 10616.67c0,-51.14 -41.46,-92.6 -92.6,-92.6 -51.14,0 -92.6,41.46 -92.6,92.6 0,51.14 41.46,92.6 92.6,92.6 51.14,0 92.6,-41.46 92.6,-92.6z"/>
+     <path id="freckle_r_2" class="fil45" d="M13304.58 10352.08c0,-43.83 -35.54,-79.37 -79.37,-79.37 -43.83,0 -79.37,35.54 -79.37,79.37 0,43.83 35.54,79.37 79.37,79.37 43.83,0 79.37,-35.54 79.37,-79.37z"/>
+     <path id="freckle_r_3" class="fil45" d="M12748.95 10960.62c0,-43.83 -35.54,-79.37 -79.37,-79.37 -43.83,0 -79.37,35.54 -79.37,79.37 0,43.83 35.54,79.37 79.37,79.37 43.83,0 79.37,-35.54 79.37,-79.37z"/>
+    </g>
+    <path id="head_forehead_marks" class="fil46 str41" d="M9970.83 7970.83l158.75 582.09m370.42 -714.38l0 661.46m529.17 -529.17l-158.75 582.09"/>
+    <path id="muzzle" class="fil0" d="M7325 10616.67c2116.67,1763.89 4233.33,1763.89 6350,0 0,1763.89 -1058.33,2778.12 -3175,3042.7 -2116.67,-264.58 -3175,-1278.81 -3175,-3042.7z"/>
+    <path id="muzzle_shadow" class="fil47" d="M7854.17 11013.54c1763.89,1146.53 3527.77,1146.53 5291.66,0 -176.39,1322.92 -1058.33,2072.57 -2645.83,2248.96 -1587.5,-176.39 -2469.44,-926.04 -2645.83,-2248.96z"/>
+    <path id="muzzle_дшту" class="fil7 str9" d="M7325 10616.67c2116.67,1763.89 4233.33,1763.89 6350,0 0,1763.89 -1058.33,2778.12 -3175,3042.7 -2116.67,-264.58 -3175,-1278.81 -3175,-3042.7z"/>
+    <polyline id="muzzle_fur_l" class="fil22 str42" points="7430.83,11410.42 8012.92,11622.08 7536.67,11992.5 8065.83,12151.25 "/>
+    <polyline id="muzzle_fur_r" class="fil22 str42" points="13569.17,11410.42 12987.08,11622.08 13463.33,11992.5 12934.17,12151.25 "/>
+    <g id="whiskers">
+     <path id="whisker_l_1" class="fil7 str27" d="M7457.29 11675c-1146.53,-264.58 -2248.96,-308.68 -3307.29,-132.29"/>
+     <path id="whisker_l_2" class="fil7 str27" d="M7510.21 12151.25c-1093.61,35.28 -2125.49,273.4 -3095.63,714.37"/>
+     <path id="whisker_r_1" class="fil7 str27" d="M13542.71 11675c1146.53,-264.58 2248.96,-308.68 3307.29,-132.29"/>
+     <path id="whisker_r_2" class="fil7 str27" d="M13489.79 12151.25c1093.61,35.28 2125.49,273.4 3095.63,714.37"/>
+    </g>
+    <g id="eyes">
+     <g id="mascot_eyes_open">
+      <path id="eye_l_ring" class="fil48" d="M9891.46 9558.33c0,-613.73 -497.52,-1111.25 -1111.25,-1111.25 -613.73,0 -1111.25,497.52 -1111.25,1111.25 0,613.73 497.52,1111.25 1111.25,1111.25 613.73,0 1111.25,-497.52 1111.25,-1111.25z"/>
+      <path id="eye_r_ring" class="fil48" d="M13331.04 9558.33c0,-613.73 -497.52,-1111.25 -1111.25,-1111.25 -613.73,0 -1111.25,497.52 -1111.25,1111.25 0,613.73 497.52,1111.25 1111.25,1111.25 613.73,0 1111.25,-497.52 1111.25,-1111.25z"/>
+      <circle id="eye_l" class="fil15" cx="8780.21" cy="9558.33" r="846.66"/>
+      <circle id="eye_l_iris" class="fil49" cx="8780.21" cy="9664.17" r="635"/>
+      <circle id="eye_l_pupil" class="fil50" cx="8780.21" cy="9611.25" r="396.87"/>
+      <circle id="eye_l_highlight" class="fil0" cx="9071.25" cy="9240.83" r="264.58"/>
+      <path id="eye_l_highlight_2" class="fil51" d="M8661.14 9955.21c0,-65.76 -53.3,-119.06 -119.06,-119.06 -65.76,0 -119.06,53.3 -119.06,119.06 0,65.76 53.3,119.06 119.06,119.06 65.76,0 119.06,-53.3 119.06,-119.06z"/>
+      <circle id="eye_r" class="fil15" cx="12219.79" cy="9558.33" r="846.66"/>
+      <circle id="eye_r_iris" class="fil49" cx="12219.79" cy="9664.17" r="635"/>
+      <circle id="eye_r_pupil" class="fil50" cx="12219.79" cy="9611.25" r="396.87"/>
+      <circle id="eye_r_highlight" class="fil0" cx="12510.83" cy="9240.83" r="264.58"/>
+      <path id="eye_r_highlight_2" class="fil51" d="M12100.73 9955.21c0,-65.76 -53.3,-119.06 -119.06,-119.06 -65.76,0 -119.06,53.3 -119.06,119.06 0,65.76 53.3,119.06 119.06,119.06 65.76,0 119.06,-53.3 119.06,-119.06z"/>
+      <path id="eye_l_lash" class="fil7 str27" d="M8039.37 9161.46c-123.47,-123.47 -238.12,-167.57 -343.95,-132.29m396.87 -132.3c-88.19,-158.75 -194.03,-238.12 -317.5,-238.12"/>
+      <path id="eye_r_lash" class="fil7 str27" d="M12960.63 9161.46c123.47,-123.47 238.12,-167.57 343.95,-132.29m-396.87 -132.3c88.19,-158.75 194.03,-238.12 317.5,-238.12"/>
+     </g>
+     <g id="eyes_closed">
+      <path id="eye_l_low" class="fil7 str43" d="M7721.87 9594.39c705.56,264.59 1411.12,264.59 2116.67,0"/>
+      <path id="eye_r_low" class="fil7 str43" d="M11161.46 9594.39c705.55,264.59 1411.11,264.59 2116.67,0"/>
+     </g>
+    </g>
+    <g id="mascot_eyebrows">
+     <g id="eyebrows_default">
+      <path id="eyebrow_l_default" class="fil7 str43" d="M7721.87 8235.42c705.56,-352.78 1411.12,-352.78 2116.67,0"/>
+      <path id="eyebrow_r_default" class="fil7 str43" d="M11161.46 8235.42c705.55,-352.78 1411.11,-352.78 2116.67,0"/>
+     </g>
+     <g id="eyebrows_high">
+      <path id="eyebrow_l_high" class="fil7 str43" d="M7721.87 7706.25c705.56,-440.97 1411.12,-440.97 2116.67,0"/>
+      <path id="eyebrow_r_high" class="fil7 str43" d="M11161.46 7706.25c705.55,-440.97 1411.11,-440.97 2116.67,0"/>
+     </g>
+     <g id="eyebrows_low">
+      <path id="eyebrow_l_low" class="fil7 str43" d="M7721.87 8764.58c705.56,264.59 1411.12,264.59 2116.67,0"/>
+      <path id="eyebrow_r_low" class="fil7 str43" d="M11161.46 8764.58c705.55,264.59 1411.11,264.59 2116.67,0"/>
+     </g>
+    </g>
+    <path id="nose_bridge" class="fil52 str44" d="M10500 9401.98l0 1719.8m0 -1719.8l0 0 0 0z"/>
+    <circle id="nose" class="fil15" cx="10500" cy="11518.65" r="423.33"/>
+    <path id="nose_highlight" class="fil17" d="M10500 11359.9c0,-51.14 -71.07,-92.6 -158.75,-92.6 -87.68,0 -158.75,41.46 -158.75,92.6 0,51.14 71.07,92.6 158.75,92.6 87.68,0 158.75,-41.46 158.75,-92.6z"/>
+    <g id="mascot_mouth">
+     <g id="mouth_neutral">
+      <path id="mouth_left" class="fil7 str8" d="M10500 11915.53c-352.78,529.16 -705.56,705.55 -1058.33,529.16"/>
+      <path id="mouth_right" class="fil7 str8" d="M10500 11915.53c352.78,529.16 705.56,705.55 1058.33,529.16"/>
+      <line id="mouth_center" class="fil7 str8" x1="10500" y1="11915.53" x2="10500" y2= "12497.61" />
+     </g>
+     <g id="mouth_open">
+      <path id="mouth_open_shape" class="fil15 str5" d="M9177.08 12180.11c881.95,1058.33 1763.89,1058.33 2645.84,0 -881.95,529.17 -1763.89,529.17 -2645.84,0z"/>
+      <path id="mouth_open_tongue" class="fil11" d="M9706.25 12576.98c529.17,440.98 1058.33,440.98 1587.5,0 -529.17,264.59 -1058.33,264.59 -1587.5,0z"/>
+     </g>
+     <g id="mouth_surprised">
+      <ellipse id="mouth_surprised_shape" class="fil15 str7" cx="10500" cy="12444.69" rx="582.08" ry="740.83"/>
+      <ellipse id="mouth_surprised_inner" class="fil0" cx="10500" cy="12312.4" rx="264.58" ry="370.41"/>
+     </g>
+    </g>
+   </g>
+   <g id="mascot_helmet">
+    <path id="helmet_dome" class="fil27 str9" d="M5472.92 6647.92c88.19,-2645.84 1763.89,-4012.85 5027.08,-4101.05 3263.19,88.2 4938.89,1455.21 5027.08,4101.05l-10054.16 0z"/>
+    <path class="fil27 str13" d="M5340.62 6251.04l10318.76 0c438.29,0 793.74,355.45 793.74,793.75l0.01 0c-0.01,438.3 -355.46,793.75 -793.76,793.75l-10318.75 0c-438.29,0 -793.74,-355.45 -793.74,-793.75l-0.01 0c0.01,-438.3 355.46,-793.75 793.76,-793.75z"/>
+    <path class="fil26 str6" d="M5869.79 5589.58l9260.42 0c219.14,0 396.87,177.73 396.87,396.88l0 132.29c0,219.15 -177.73,396.88 -396.88,396.88l-9260.41 -0.01c-219.14,0.01 -396.87,-177.72 -396.87,-396.87l0 -132.29c0,-219.15 177.73,-396.88 396.88,-396.88z"/>
+    <circle id="helmet_lamp_glow" class="fil53" cx="10500" cy="4266.67" r="2513.54"/>
+    <path id="helmet_lamp_holder" class="fil26 str5" d="M9388.75 5060.42c740.83,388.05 1481.67,388.05 2222.5,0l0 264.58c-740.83,388.06 -1481.67,388.06 -2222.5,0l0 -264.58z"/>
+    <circle id="helmet_lamp_outer" class="fil0 str13" cx="10500" cy="4266.67" r="899.58"/>
+    <circle id="helmet_lamp_inner" class="fil11 str7" cx="10500" cy="4266.67" r="423.33"/>
+    <path class="fil38 str6" d="M13357.5 4002.08l635 0c116.87,0 211.66,94.79 211.66,211.67l0.01 899.58c-0.01,116.88 -94.8,211.67 -211.68,211.67l-634.99 0c-116.89,0 -211.68,-94.79 -211.68,-211.67l0.01 -899.58c-0.01,-116.88 94.78,-211.67 211.66,-211.67z"/>
+    <path id="helmet_lamp_highlight" class="fil7 str45" d="M10182.5 3949.17c141.11,-141.11 299.86,-176.39 476.25,-105.84"/>
+    <path id="helmet_lamp_inner_highlight" class="fil7 str46" d="M10314.79 4134.37c52.92,-52.91 114.65,-70.55 185.21,-52.91"/>
+    <path id="helmet_crest" class="fil32 str47" d="M10500 2599.79l0 608.54m0 -608.54l0 0 0 0z"/>
+    <path id="helmet_shine_main" class="fil54 str48" d="M6663.54 5325c88.2,-1058.33 573.27,-1763.89 1455.21,-2116.67"/>
+    <path id="helmet_shine_small" class="fil28 str49" d="M8647.92 2890.83c211.66,-88.19 423.33,-141.11 635,-158.75"/>
+    <path id="helmet_vent_1" class="fil7 str50" d="M7854.17 4531.25c529.16,-176.39 970.14,-88.19 1322.91,264.58"/>
+    <path id="helmet_vent_2" class="fil7 str50" d="M11822.92 4795.83c388.05,-352.78 829.02,-440.97 1322.91,-264.58"/>
+    <circle id="helmet_rivet_l" class="fil55 str26" cx="6055" cy="6065.83" r="158.75"/>
+    <circle id="helmet_rivet_c1" class="fil55 str26" cx="8647.92" cy="6065.83" r="158.75"/>
+    <circle id="helmet_rivet_c2" class="fil55 str26" cx="12352.08" cy="6065.83" r="158.75"/>
+    <circle id="helmet_rivet_r" class="fil55 str26" cx="14945" cy="6065.83" r="158.75"/>
+    <path id="helmet_brim_shadow" class="fil56 str51" d="M5076.04 7309.37c3615.97,440.98 7231.95,440.98 10847.92,0"/>
+    <polyline id="helmet_badge_mark" class="fil7 str52" points="13410.42,4663.54 13675,4928.12 13992.5,4425.42 "/>
+   </g>
   </g>
+ </g>
 </svg>
