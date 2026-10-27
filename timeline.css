@@ -1,0 +1,408 @@
+/* Timeline stage: overrides the skeleton page's container sizing. */
+html, body {
+    margin: 0 !important;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Noto Sans", "Noto Sans Armenian", "Segoe UI",
+        system-ui, sans-serif;
+}
+
+#fox-container {
+    position: relative !important;
+    flex: none !important;
+    width: min(100vw, 56.25vh) !important;
+    height: min(100vh, 177.7778vw) !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+    background: #FFF4E0;
+    isolation: isolate;
+    container-type: inline-size;
+    --u: calc(100cqw / 1080);
+}
+
+#fox-container > svg {
+    position: absolute !important;
+    left: 50% !important;
+    top: 13.7% !important;
+    width: auto !important;
+    height: 70.4% !important;
+    max-width: none !important;
+    max-height: none !important;
+    display: block !important;
+    transform: translateX(-50%) !important;
+    overflow: visible !important;
+}
+
+body.chroma-key,
+body[data-bg="green"] {
+    background: #000;
+}
+
+body.chroma-key #fox-container,
+body[data-bg="green"] #fox-container {
+    background: #00FF00 !important;
+}
+
+body[data-bg="transparent"] #fox-container {
+    background: transparent !important;
+}
+
+body[data-bg="transparent"] {
+    background: #000;
+}
+
+/* Scene and chroma-key background selection. */
+#fox-container[data-bg="green"] #bg,
+#fox-container[data-bg="transparent"] #bg {
+    display: none !important;
+}
+
+#fox-container[data-bg="scene"] #bg {
+    display: inline !important;
+}
+
+/* SVG poses: all switching is controlled by data attributes. */
+#fox-container[data-arms]:not([data-arms="default"]) #arms_pose_default {
+    display: none !important;
+}
+#fox-container[data-arms]:not([data-arms="down"]) #arms_pose_down {
+    display: none !important;
+}
+#fox-container[data-arms]:not([data-arms="point_left"]) #arms_pose_point_left {
+    display: none !important;
+}
+#fox-container[data-arms]:not([data-arms="wave"]) #arms_pose_wave {
+    display: none !important;
+}
+#fox-container[data-arms="default"] #arms_pose_default {
+    display: inline !important;
+}
+#fox-container[data-arms="down"] #arms_pose_down {
+    display: inline !important;
+}
+#fox-container[data-arms="point_left"] #arms_pose_point_left {
+    display: inline !important;
+}
+#fox-container[data-arms="wave"] #arms_pose_wave {
+    display: inline !important;
+}
+
+#fox-container[data-brows]:not([data-brows="default"]) #eyebrows_default {
+    display: none !important;
+}
+#fox-container[data-brows]:not([data-brows="high"]) #eyebrows_high {
+    display: none !important;
+}
+#fox-container[data-brows]:not([data-brows="low"]) #eyebrows_low {
+    display: none !important;
+}
+#fox-container[data-brows="default"] #eyebrows_default {
+    display: inline !important;
+}
+#fox-container[data-brows="high"] #eyebrows_high {
+    display: inline !important;
+}
+#fox-container[data-brows="low"] #eyebrows_low {
+    display: inline !important;
+}
+
+#fox-container[data-mouth]:not([data-mouth="neutral"]) #mouth_neutral {
+    display: none !important;
+}
+#fox-container[data-mouth]:not([data-mouth="open"]) #mouth_open {
+    display: none !important;
+}
+#fox-container[data-mouth]:not([data-mouth="surprised"]) #mouth_surprised {
+    display: none !important;
+}
+#fox-container[data-mouth="neutral"] #mouth_neutral {
+    display: inline !important;
+    opacity: 1 !important;
+}
+#fox-container[data-mouth="open"] #mouth_open {
+    display: inline !important;
+    opacity: 1 !important;
+}
+#fox-container[data-mouth="surprised"] #mouth_surprised {
+    display: inline !important;
+    opacity: 1 !important;
+}
+
+#fox-container[data-eyes="closed"] #mascot_eyes_open {
+    opacity: 0 !important;
+}
+#fox-container[data-eyes="closed"] #eyes_closed {
+    opacity: 1 !important;
+}
+#fox-container[data-eyes="open"] #mascot_eyes_open {
+    opacity: 1 !important;
+}
+#fox-container[data-eyes="open"] #eyes_closed {
+    opacity: 0 !important;
+}
+
+/* Make sure the original talk script cannot override timeline mouths. */
+#fox-container.timeline-active.talking #mouth_neutral,
+#fox-container.timeline-active.talking #mouth_open {
+    animation: none !important;
+}
+
+#fox-container.timeline-active #mascot_body {
+    transform-origin: 50% 100%;
+}
+
+/* DOM cards are separate from the artwork and stay inside the 9:16 stage. */
+#timeline-cards {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.timeline-card {
+    position: absolute;
+    box-sizing: border-box;
+    max-width: 88%;
+    padding: calc(24 * var(--u)) calc(30 * var(--u));
+    border: calc(6 * var(--u)) solid #222;
+    border-radius: calc(28 * var(--u));
+    background: #FFF4E0;
+    color: #222;
+    box-shadow: 0 calc(8 * var(--u)) calc(0 * var(--u)) rgba(34, 34, 34, .12);
+    font-family: "Noto Sans", "Noto Sans Armenian", "Segoe UI",
+        system-ui, sans-serif;
+    font-size: calc(44 * var(--u));
+    line-height: 1.16;
+    font-weight: 650;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+    opacity: 0;
+    transform: translateY(calc(12 * var(--u))) scale(.97);
+    transition:
+        opacity 250ms ease,
+        transform 250ms cubic-bezier(.2, .8, .2, 1);
+}
+
+.timeline-card.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.timeline-card[data-size="xl"] {
+    font-size: calc(96 * var(--u));
+}
+.timeline-card[data-size="l"] {
+    font-size: calc(64 * var(--u));
+}
+.timeline-card[data-size="m"] {
+    font-size: calc(44 * var(--u));
+}
+
+.timeline-card[data-position="top"] {
+    top: 14%;
+    left: 50%;
+    transform: translate(-50%, calc(12 * var(--u))) scale(.97);
+    width: max-content;
+    max-width: 88%;
+    text-align: center;
+}
+.timeline-card[data-position="top"].is-visible {
+    transform: translate(-50%, 0) scale(1);
+}
+
+.timeline-card[data-position="upper_left"] {
+    top: 29%;
+    left: 5%;
+    max-width: 78%;
+    text-align: left;
+}
+.timeline-card[data-position="bottom"] {
+    bottom: 14%;
+    left: 50%;
+    transform: translate(-50%, calc(12 * var(--u))) scale(.97);
+    width: max-content;
+    max-width: 88%;
+    text-align: center;
+}
+.timeline-card[data-position="bottom"].is-visible {
+    transform: translate(-50%, 0) scale(1);
+}
+
+.timeline-card .role-word {
+    color: #1F4E79;
+    font-weight: 850;
+}
+.timeline-card .role-transcription {
+    color: #777;
+    font-weight: 450;
+}
+.timeline-card .role-translation {
+    color: #FF8A3D;
+    font-weight: 800;
+}
+.timeline-card .role-example,
+.timeline-card .role-example_translation,
+.timeline-card .role-hook,
+.timeline-card .role-cta {
+    color: #222;
+    font-weight: 750;
+}
+
+#timeline-subtitle {
+    position: absolute;
+    z-index: 12;
+    left: 6%;
+    right: 6%;
+    bottom: 4%;
+    text-align: center;
+    color: #FFF4E0;
+    text-shadow: 0 2px 5px #000, 0 0 12px #000;
+    font-size: calc(36 * var(--u));
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: pre-line;
+    pointer-events: none;
+}
+
+#timeline-panel {
+    position: fixed;
+    z-index: 1000;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    max-height: 40vh;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 16px;
+    background: rgba(20, 25, 32, .96);
+    color: white;
+    font: 14px/1.35 "Noto Sans", "Noto Sans Armenian", system-ui, sans-serif;
+    box-shadow: 0 8px 32px #0006;
+}
+
+#timeline-panel button,
+#timeline-panel input,
+#timeline-panel select,
+#timeline-panel textarea,
+#timeline-panel label {
+    font: inherit;
+}
+
+#timeline-panel button {
+    padding: 8px 12px;
+    border: 1px solid #777;
+    border-radius: 9px;
+    background: #273746;
+    color: white;
+    cursor: pointer;
+}
+#timeline-panel button:focus-visible,
+#timeline-panel input:focus-visible,
+#timeline-panel textarea:focus-visible,
+#timeline-panel select:focus-visible {
+    outline: 2px solid #FF8A3D;
+    outline-offset: 2px;
+}
+#timeline-panel input[type="range"] {
+    width: min(42vw, 320px);
+}
+#timeline-panel input[type="file"] {
+    max-width: 220px;
+}
+#timeline-panel textarea {
+    width: min(100%, 680px);
+    min-height: 72px;
+    resize: vertical;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #777;
+    background: #111820;
+    color: white;
+}
+#timeline-panel .timeline-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+}
+#timeline-status {
+    flex-basis: 100%;
+    text-align: center;
+    white-space: pre-wrap;
+}
+#timeline-status[data-error="true"] {
+    color: #ffb4a9;
+}
+
+body.timeline-clean #timeline-panel,
+body.timeline-clean .controls,
+body.timeline-clean #timeline-subtitle,
+body.timeline-clean #timeline-cards {
+    display: none !important;
+}
+body.timeline-panel-hidden #timeline-panel {
+    display: none !important;
+}
+body.timeline-panel-hidden #timeline-toggle {
+    display: block !important;
+}
+#timeline-toggle {
+    display: none !important;
+    position: fixed;
+    z-index: 1001;
+    right: 12px;
+    bottom: 12px;
+    padding: 8px 12px;
+    border-radius: 9px;
+    border: 1px solid #777;
+    background: #273746;
+    color: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #timeline-panel *,
+    #timeline-toggle {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+@media (max-width: 520px) {
+    #timeline-panel {
+        left: 6px;
+        right: 6px;
+        bottom: 6px;
+        gap: 6px;
+        padding: 8px;
+        max-height: 44vh;
+        font-size: 12px;
+    }
+    #timeline-panel button {
+        padding: 7px 9px;
+    }
+}
