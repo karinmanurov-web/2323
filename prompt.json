@@ -2,11 +2,14 @@
   "meta": {
     "language": "armenian",
     "rubric": "Стройка по-армянски",
-    "duration_sec": 46.0
+    "duration_sec": 12.5
   },
   "beats": [
     {
-      "t": [0.0, 2.5],
+      "t": [
+        0,
+        2.5
+      ],
       "say": "Пять слов для стройки по-армянски.",
       "pose": "default",
       "brows": "high",
@@ -16,7 +19,10 @@
       "card": null
     },
     {
-      "t": [2.5, 4.5],
+      "t": [
+        2.5,
+        4.5
+      ],
       "say": "Шлем.",
       "foreign": "Սաղավարտ",
       "transcription": "[сахАварт]",
@@ -26,10 +32,17 @@
       "mouth": "talk",
       "eyes": "open",
       "head": "none",
-      "card": { "position": "top", "text": "Սաղավարտ", "sub": "[сахАварт] — шлем" }
+      "card": {
+        "position": "top",
+        "text": "Սաղավարտ",
+        "sub": "[сахАварт] — шлем"
+      }
     },
     {
-      "t": [4.5, 6.5],
+      "t": [
+        4.5,
+        6.5
+      ],
       "say": "Каска.",
       "foreign": "Կասկա",
       "transcription": "[каскА]",
@@ -39,10 +52,17 @@
       "mouth": "talk",
       "eyes": "open",
       "head": "none",
-      "card": { "position": "top", "text": "Կասկա", "sub": "[каскА] — каска" }
+      "card": {
+        "position": "top",
+        "text": "Կասկա",
+        "sub": "[каскА] — каска"
+      }
     },
     {
-      "t": [6.5, 8.5],
+      "t": [
+        6.5,
+        8.5
+      ],
       "say": "Молоток.",
       "foreign": "Մուրճ",
       "transcription": "[мурч]",
@@ -52,10 +72,17 @@
       "mouth": "talk",
       "eyes": "open",
       "head": "none",
-      "card": { "position": "top", "text": "Մուրճ", "sub": "[мурч] — молоток" }
+      "card": {
+        "position": "top",
+        "text": "Մուրճ",
+        "sub": "[мурч] — молоток"
+      }
     },
     {
-      "t": [8.5, 10.5],
+      "t": [
+        8.5,
+        10.5
+      ],
       "say": "Гвоздь.",
       "foreign": "Մեխ",
       "transcription": "[мех]",
@@ -65,10 +92,17 @@
       "mouth": "talk",
       "eyes": "open",
       "head": "none",
-      "card": { "position": "top", "text": "Մեխ", "sub": "[мех] — гвоздь" }
+      "card": {
+        "position": "top",
+        "text": "Մեխ",
+        "sub": "[мех] — гвоздь"
+      }
     },
     {
-      "t": [10.5, 12.5],
+      "t": [
+        10.5,
+        12.5
+      ],
       "say": "Кирпич.",
       "foreign": "Աղյուս",
       "transcription": "[ахЮс]",
@@ -78,7 +112,11 @@
       "mouth": "talk",
       "eyes": "open",
       "head": "none",
-      "card": { "position": "top", "text": "Աղյուս", "sub": "[ахЮс] — кирпич" }
+      "card": {
+        "position": "top",
+        "text": "Աղյուս",
+        "sub": "[ахЮс] — кирпич"
+      }
     }
   ]
 }
