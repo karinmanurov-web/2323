@@ -20,6 +20,14 @@
         size: ["xl", "l", "m"]
     };
 
+    const DEFAULT_POSE = {
+        arms: "default",
+        brows: "default",
+        mouth: "neutral",
+        eyes: "open",
+        head: "none"
+    };
+
     const params = new URLSearchParams(location.search);
     let bg = ["scene", "green", "transparent"].includes(params.get("bg"))
         ? params.get("bg") : "scene";
@@ -58,8 +66,6 @@
     container.dataset.bg = bg;
     document.body.dataset.bg = bg;
 
-    // Keep the original idle keyframes running; only suppress the legacy
-    // Talk button handler so its timer cannot fight the timeline.
     const talkButton = $("#btn-talk");
     if (talkButton) {
         talkButton.addEventListener("click", event => {
@@ -132,66 +138,118 @@
         }
     };
 
-    function validate(data) {
-        if (!data || typeof data !== "object" ||
-            !Array.isArray(data.storyboard) || !data.storyboard.length) {
-            throw new Error('Expected an object with a non-empty "storyboard" array.');
+    function normalizeCard(card, index) {
+        if (card == null) return { type: "none" };
+        if (typeof card !== "object") {
+            throw new Error(`Beat ${index + 1}: card must be an object or null.`);
         }
-        const checked = data.storyboard.map((beat, index) => {
-            const fail = message => {
-                throw new Error(`Beat ${index + 1}: ${message}`);
-            };
-            if (!beat || typeof beat !== "object") fail("must be an object.");
-            if (!Number.isFinite(beat.start) || !Number.isFinite(beat.end) ||
-                beat.start < 0 || beat.end <= beat.start) {
-                fail("start/end must be valid increasing times.");
+        const normalized = { ...card };
+        if (normalized.subtitle != null && normalized.sub == null) {
+            normalized.sub = normalized.subtitle;
+        }
+        if (normalized.position != null && !VALID.position.includes(normalized.position)) {
+            throw new Error(`Beat ${index + 1}: invalid card position "${normalized.position}".`);
+        }
+        if (normalized.type != null && !VALID.type.includes(normalized.type)) {
+            throw new Error(`Beat ${index + 1}: invalid card type "${normalized.type}".`);
+        }
+        if (normalized.size != null && !VALID.size.includes(normalized.size)) {
+            throw new Error(`Beat ${index + 1}: invalid card size "${normalized.size}".`);
+        }
+        if (normalized.keep != null && typeof normalized.keep !== "boolean") {
+            throw new Error(`Beat ${index + 1}: card.keep must be boolean.`);
+        }
+        if (normalized.text != null && typeof normalized.text !== "string") {
+            throw new Error(`Beat ${index + 1}: card.text must be a string.`);
+        }
+        if (normalized.sub != null && typeof normalized.sub !== "string") {
+            throw new Error(`Beat ${index + 1}: card.sub must be a string.`);
+        }
+        return normalized;
+    }
+
+    function normalizePose(rawPose, index) {
+        if (rawPose == null) return { ...DEFAULT_POSE };
+        if (typeof rawPose === "string") {
+            if (!VALID.arms.includes(rawPose)) {
+                throw new Error(`Beat ${index + 1}: invalid pose string "${rawPose}".`);
             }
-            const pose = beat.pose || {};
-            for (const key of ["arms", "brows", "mouth", "eyes", "head"]) {
-                if (!VALID[key].includes(pose[key] ?? ({
-                    arms: "default", brows: "default", mouth: "neutral",
-                    eyes: "open", head: "none"
-                })[key])) fail(`invalid ${key} enum.`);
+            return { ...DEFAULT_POSE, arms: rawPose };
+        }
+        if (typeof rawPose !== "object") {
+            throw new Error(`Beat ${index + 1}: pose must be a string or object.`);
+        }
+        const pose = { ...DEFAULT_POSE, ...rawPose };
+        for (const key of ["arms", "brows", "mouth", "eyes", "head"]) {
+            if (!VALID[key].includes(pose[key])) {
+                throw new Error(`Beat ${index + 1}: invalid ${key} enum.`);
             }
-            const card = beat.card || { type: "none" };
-            if (card.position != null && !VALID.position.includes(card.position)) {
-                fail(`invalid card position "${card.position}".`);
+        }
+        return pose;
+    }
+
+    function normalizeBeat(raw, index, sourceKey) {
+        if (!raw || typeof raw !== "object") {
+            throw new Error(`${sourceKey}[${index + 1}]: must be an object.`);
+        }
+        let start;
+        let end;
+        if (Array.isArray(raw.t)) {
+            if (raw.t.length !== 2 ||
+                !raw.t.every(v => typeof v === "number" && Number.isFinite(v))) {
+                throw new Error(`${sourceKey}[${index + 1}]: t must be an array of two numbers.`);
             }
-            if (card.type != null && !VALID.type.includes(card.type)) {
-                fail(`invalid card type "${card.type}".`);
-            }
-            if (card.size != null && !VALID.size.includes(card.size)) {
-                fail(`invalid card size "${card.size}".`);
-            }
-            if (card.keep != null && typeof card.keep !== "boolean") {
-                fail("card.keep must be boolean.");
-            }
-            if (card.text != null && typeof card.text !== "string") {
-                fail("card.text must be a string.");
-            }
-            if (beat.speech != null && typeof beat.speech !== "string") {
-                fail("speech must be a string.");
-            }
-            return {
-                start: beat.start,
-                end: beat.end,
-                speech: beat.speech || beat.say || "",
-                pose: {
-                    arms: pose.arms || "default",
-                    brows: pose.brows || "default",
-                    mouth: pose.mouth || "neutral",
-                    eyes: pose.eyes || "open",
-                    head: pose.head || "none"
-                },
-                card: { ...card }
-            };
-        });
+            [start, end] = raw.t;
+        } else if (Number.isFinite(raw.start) && Number.isFinite(raw.end)) {
+            start = raw.start;
+            end = raw.end;
+        } else {
+            throw new Error(`${sourceKey}[${index + 1}]: missing t/start/end.`);
+        }
+        if (start < 0 || end <= start) {
+            throw new Error(`${sourceKey}[${index + 1}]: start/end must be valid increasing times.`);
+        }
+        const speech = raw.say ?? raw.speech ?? "";
+        if (typeof speech !== "string") {
+            throw new Error(`${sourceKey}[${index + 1}]: say/speech must be a string.`);
+        }
+
+        const { t, say, speech: _sp, start: _s, end: _e, pose, card, ...rest } = raw;
+        return {
+            ...rest,
+            start,
+            end,
+            speech,
+            pose: normalizePose(pose, index),
+            card: normalizeCard(card, index)
+        };
+    }
+
+    function validate(data) {
+        if (!data || typeof data !== "object") {
+            throw new Error("Expected a JSON object.");
+        }
+        let source = null;
+        let sourceKey = null;
+        if (Array.isArray(data.storyboard) && data.storyboard.length) {
+            source = data.storyboard;
+            sourceKey = "storyboard";
+        } else if (Array.isArray(data.beats) && data.beats.length) {
+            source = data.beats;
+            sourceKey = "beats";
+        }
+        if (!source) {
+            throw new Error('Expected a non-empty "storyboard" or "beats" array.');
+        }
+
+        const checked = source.map((beat, index) => normalizeBeat(beat, index, sourceKey));
         checked.sort((a, b) => a.start - b.start);
         for (let i = 1; i < checked.length; i++) {
-            if (checked[i].start < checked[i - 1].start) {
-                throw new Error("Beat times must be chronological.");
+            if (checked[i].start < checked[i - 1].end - 1e-6) {
+                // перекрытия допустимы, но зафиксируем порядок
             }
         }
+
         const meta = data.meta || {};
         const declared = Number(meta.duration_sec);
         const end = Math.max(...checked.map(b => b.end));
@@ -232,7 +290,6 @@
     }
 
     function currentBeat(t) {
-        // Half-open beat intervals ensure deterministic transitions.
         for (let i = beats.length - 1; i >= 0; i--) {
             if (t >= beats[i].start && t < beats[i].end) return i;
         }
@@ -240,10 +297,7 @@
     }
 
     function setPose(beat, t, index) {
-        const pose = beat ? beat.pose : {
-            arms: "default", brows: "default", mouth: "neutral",
-            eyes: "open", head: "none"
-        };
+        const pose = beat ? beat.pose : { ...DEFAULT_POSE };
         container.dataset.arms = pose.arms;
         container.dataset.brows = pose.brows;
         container.dataset.eyes = pose.eyes;
@@ -253,9 +307,12 @@
         } else {
             const elapsed = t - beat.start;
             const remaining = beat.end - t;
-            if (remaining <= 0.15 || !beat.speech.trim()) {
+            
+            // Если это конец фразы или текст пустой, рот закрыт
+            if (remaining <= 0.15 || !beat.speech || !beat.speech.trim()) {
                 container.dataset.mouth = "neutral";
             } else if (audioEnabled && analyser && el("tl-lipsync").checked) {
+                // Логика липсинка
                 analyser.getByteTimeDomainData(audioData);
                 let sum = 0;
                 for (let i = 0; i < audioData.length; i++) {
@@ -265,14 +322,10 @@
                 const rms = Math.sqrt(sum / audioData.length);
                 container.dataset.mouth = rms > 0.035 ? "open" : "neutral";
             } else {
-                // Seeded, beat-relative pattern: repeatable after any seek.
-                const seed = (index + 1) * 2654435761;
-                const step = Math.floor(elapsed * 5.1 * manualMouthSpeed);
-                let x = (seed ^ Math.imul(step + 1, 2246822519)) >>> 0;
-                x ^= x << 13;
-                x ^= x >>> 17;
-                x ^= x << 5;
-                container.dataset.mouth = (x >>> 0) % 100 < 57 ? "open" : "neutral";
+                // Синусоидальное открытие рта (чтобы он точно двигался)
+                // 6 раз в секунду рот открывается и закрывается
+                const phase = Math.sin(elapsed * 6 * Math.PI);
+                container.dataset.mouth = phase > 0 ? "open" : "neutral";
             }
         }
 
@@ -281,9 +334,7 @@
             if (body && body.animate) {
                 if (popAnimation) popAnimation.cancel();
                 popAnimation = body.animate([
-                    { scale: "1" },
-                    { scale: "1.02" },
-                    { scale: "1" }
+                    { scale: "1" }, { scale: "1.02" }, { scale: "1" }
                 ], { duration: 200, easing: "ease-out" });
             }
         }
@@ -331,7 +382,6 @@
     }
 
     function cardMarkup(text) {
-        // Text is always inserted as text, never interpreted as HTML.
         const node = document.createElement("div");
         node.textContent = text;
         return node;
@@ -364,7 +414,10 @@
 
         const lines = Array.isArray(card.lines)
             ? card.lines
-            : [{ role: card.type || "hook", text: card.text || "" }];
+            : [
+                { role: card.type || "hook", text: card.text || "" },
+                ...(card.sub ? [{ role: "translation", text: card.sub }] : [])
+            ];
 
         for (const line of lines) {
             const span = document.createElement("span");
@@ -372,7 +425,7 @@
             span.className = `role-${role}`;
             span.textContent = line.text == null ? "" : String(line.text);
             node.appendChild(span);
-            if (line !== lines[lines.length - 1]) node.appendChild(document.createTextNode("\n"));
+            if (line !== lines[lines.length - 1]) node.appendChild(document.createElement("br"));
         }
 
         cards.replaceChildren(node);
@@ -395,10 +448,6 @@
         el("tl-seek").value = String(time);
         el("tl-clock").textContent =
             `${time.toFixed(2).padStart(5, "0")} / ${duration.toFixed(2)}`;
-
-        if (beat && beat.pose.head === "none" && headAnimation) {
-            // No forced cancellation: its short easing returns the head to rest.
-        }
     }
 
     function tick(now) {
@@ -470,7 +519,7 @@
             analyser.fftSize = 1024;
             analyser.smoothingTimeConstant = 0.45;
             audioData = new Uint8Array(analyser.fftSize);
-            source.connect(analyser); // Intentionally NOT connected to destination.
+            source.connect(analyser);
             audioEnabled = true;
             audioOffset = time;
             status("Audio ready. Play to synchronise it with the timeline.");
@@ -507,10 +556,6 @@
         container.dataset.bg = bg;
         document.body.dataset.bg = bg;
         document.body.classList.toggle("chroma-key", bg === "green");
-        if (talkButton) {
-            const oldGreen = $("#btn-green");
-            if (oldGreen) oldGreen.setAttribute("aria-pressed", String(bg === "green"));
-        }
         const url = new URL(location.href);
         url.searchParams.set("bg", bg);
         history.replaceState(null, "", url);
@@ -547,13 +592,11 @@
         if (file) loadAudio(file);
     });
 
-    // The original page's Start/Pause buttons still toggle .animating.
     const oldStart = $("#btn-start");
     const oldPause = $("#btn-pause");
     if (oldStart) oldStart.addEventListener("click", play);
     if (oldPause) oldPause.addEventListener("click", pause);
 
-    // Keep the legacy green button from fighting the selected background.
     const oldGreen = $("#btn-green");
     if (oldGreen) {
         oldGreen.addEventListener("click", event => {
