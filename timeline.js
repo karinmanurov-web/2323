@@ -214,13 +214,27 @@
             throw new Error(`${sourceKey}[${index + 1}]: say/speech must be a string.`);
         }
 
-        const { t, say, speech: _sp, start: _s, end: _e, pose, card, ...rest } = raw;
+        const {
+            t, say, speech: _sp, start: _s, end: _e, pose, card,
+            brows: _brows, mouth: _mouth, eyes: _eyes, head: _head,
+            ...rest
+        } = raw;
+
+        // Accept both storyboard formats: nested pose objects and flat prompt fields.
+        const flatPose = {};
+        for (const key of ["brows", "mouth", "eyes", "head"]) {
+            if (raw[key] != null) flatPose[key] = raw[key];
+        }
+        const poseInput = typeof pose === "string"
+            ? { ...flatPose, arms: pose }
+            : { ...flatPose, ...(pose || {}) };
+
         return {
             ...rest,
             start,
             end,
             speech,
-            pose: normalizePose(pose, index),
+            pose: normalizePose(poseInput, index),
             card: normalizeCard(card, index)
         };
     }
