@@ -87,6 +87,9 @@ body[data-bg="transparent"] {
 #fox-container[data-arms]:not([data-arms="point_left"]) #arms_pose_point_left {
     display: none !important;
 }
+#fox-container[data-arms]:not([data-arms="point_right"]) #arms_pose_point_right {
+    display: none !important;
+}
 #fox-container[data-arms]:not([data-arms="wave"]) #arms_pose_wave {
     display: none !important;
 }
@@ -97,6 +100,9 @@ body[data-bg="transparent"] {
     display: inline !important;
 }
 #fox-container[data-arms="point_left"] #arms_pose_point_left {
+    display: inline !important;
+}
+#fox-container[data-arms="point_right"] #arms_pose_point_right {
     display: inline !important;
 }
 #fox-container[data-arms="wave"] #arms_pose_wave {

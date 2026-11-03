@@ -17,7 +17,7 @@
 |---|---|---|
 | `t` | `[0, 2.5]` | время бита, секунды |
 | `say` | строка | реплика (для субтитров и движения рта) |
-| `pose` | `default`, `down`, `point_left`, `wave` | положение рук |
+| `pose` | `default`, `down`, `point_left`, `point_right`, `wave` | положение рук |
 | `brows` | `default`, `high`, `low` | брови |
 | `mouth` | `neutral`, `open`, `surprised`, `talk` | рот; `talk` — говорит под реплику |
 | `eyes` | `open`, `closed` | глаза |
