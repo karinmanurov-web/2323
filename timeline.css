@@ -93,6 +93,9 @@ body[data-bg="transparent"] {
 #fox-container[data-arms]:not([data-arms="wave"]) #arms_pose_wave {
     display: none !important;
 }
+#fox-container[data-arms]:not([data-arms="notebook"]) #arms_pose_notebook {
+    display: none !important;
+}
 #fox-container[data-arms="default"] #arms_pose_default {
     display: inline !important;
 }
@@ -106,6 +109,9 @@ body[data-bg="transparent"] {
     display: inline !important;
 }
 #fox-container[data-arms="wave"] #arms_pose_wave {
+    display: inline !important;
+}
+#fox-container[data-arms="notebook"] #arms_pose_notebook {
     display: inline !important;
 }
 
