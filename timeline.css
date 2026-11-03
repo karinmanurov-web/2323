@@ -162,12 +162,6 @@ body[data-bg="transparent"] {
     display: none !important;
 }
 
-/* Make sure the original talk script cannot override timeline mouths. */
-#fox-container.timeline-active.talking #mouth_neutral,
-#fox-container.timeline-active.talking #mouth_open {
-    animation: none !important;
-}
-
 #fox-container.timeline-active #mascot_body {
     transform-origin: 50% 100%;
 }

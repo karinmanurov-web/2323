@@ -58,22 +58,12 @@
     let manualMouthSpeed = 1;
 
     container.classList.add("timeline-active");
-    container.classList.remove("talking");
     container.dataset.arms = "default";
     container.dataset.brows = "default";
     container.dataset.mouth = "neutral";
     container.dataset.eyes = "open";
     container.dataset.bg = bg;
     document.body.dataset.bg = bg;
-
-    const talkButton = $("#btn-talk");
-    if (talkButton) {
-        talkButton.addEventListener("click", event => {
-            event.stopImmediatePropagation();
-            event.preventDefault();
-            status("Use the timeline's Play button to animate speech.");
-        }, true);
-    }
 
     const cards = document.createElement("div");
     cards.id = "timeline-cards";
@@ -503,7 +493,7 @@
             } else {
                 // Синусоидальное открытие рта (чтобы он точно двигался)
                 // 6 раз в секунду рот открывается и закрывается
-                const phase = Math.sin(elapsed * 6 * Math.PI);
+                const phase = Math.sin(elapsed * 6 * manualMouthSpeed * Math.PI);
                 container.dataset.mouth = phase > 0 ? "open" : "neutral";
             }
         }
@@ -774,7 +764,12 @@
     const oldStart = $("#btn-start");
     const oldPause = $("#btn-pause");
     if (oldStart) oldStart.addEventListener("click", play);
-    if (oldPause) oldPause.addEventListener("click", pause);
+    if (oldPause) {
+        oldPause.addEventListener("click", () => {
+            pause();
+            container.classList.remove("animating");
+        });
+    }
 
     const oldGreen = $("#btn-green");
     if (oldGreen) {
@@ -786,6 +781,9 @@
             document.body.dataset.bg = bg;
             document.body.classList.toggle("chroma-key", bg === "green");
             el("tl-bg").value = bg;
+            const on = bg === "green";
+            oldGreen.setAttribute("aria-pressed", String(on));
+            oldGreen.textContent = on ? "⬜ Обычный фон" : "🟩 Зелёный фон";
         }, true);
     }
 

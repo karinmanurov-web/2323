@@ -45,21 +45,6 @@
             padding: 0 12px 16px;
         }
 
-        .speed-control {
-            display: flex;
-            align-items: center;
-            gap: 9px;
-            padding: 10px 14px;
-            border-radius: 24px;
-            background: #fff;
-            color: #222;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .speed-control input { width: 120px; accent-color: #C85B17; }
-        #speed-value { min-width: 34px; text-align: right; font-variant-numeric: tabular-nums; }
-
         button {
             padding: 12px 30px;
             font-size: 16px;
@@ -87,12 +72,6 @@
         }
         #btn-pause:hover { box-shadow: 0 6px 20px rgba(16, 48, 78, 0.6); }
 
-        #btn-talk {
-            background-color: #C85B17;
-            box-shadow: 0 4px 15px rgba(200, 91, 23, 0.3);
-        }
-        #btn-talk:hover { box-shadow: 0 6px 20px rgba(200, 91, 23, 0.45); }
-
         /* --- FOX TEST ANIMATION v2 --- */
 
         /*
@@ -116,13 +95,8 @@
             display: inline;
         }
 
-        /* Conversation mode uses neutral and open mouth only. */
+        /* The open mouth is hidden by default; timeline.css switches it via data-mouth. */
         #mouth_open { display: none !important; opacity: 0; }
-        .talking #mouth_neutral,
-        .talking #mouth_open {
-            display: inline !important;
-            animation: none !important;
-        }
 
         body.chroma-key { background: #00FF00; }
         body.chroma-key .svg-container {
@@ -848,12 +822,6 @@
     <div class="controls">
         <button id="btn-start">▶ Старт</button>
         <button id="btn-pause">⏸ Пауза</button>
-        <button id="btn-talk" aria-pressed="false">💬 Разговор</button>
-        <label class="speed-control" for="mouth-speed">
-            Скорость рта
-            <input id="mouth-speed" type="range" min="0.5" max="2" step="0.1" value="1">
-            <span id="speed-value">1.0×</span>
-        </label>
         <button id="btn-green" aria-pressed="false">🟩 Зелёный фон</button>
     </div>
     <link rel="stylesheet" href="timeline.css">
@@ -861,76 +829,5 @@
     <script src="timeline.js" defer></script>
     <!-- Keep the existing SVG artwork and all its IDs unchanged. -->
 
-    <script>
-        const container = document.getElementById('fox-container');
-        const btnStart = document.getElementById('btn-start');
-        const btnPause = document.getElementById('btn-pause');
-        const btnTalk = document.getElementById('btn-talk');
-        const btnGreen = document.getElementById('btn-green');
-        const speedInput = document.getElementById('mouth-speed');
-        const speedValue = document.getElementById('speed-value');
-        const mouthNeutral = container.querySelector('#mouth_neutral');
-        const mouthOpen = container.querySelector('#mouth_open');
-
-        let talking = false;
-        let talkTimer = null;
-        let talkStep = 0;
-
-        btnStart.addEventListener('click', () => container.classList.add('animating'));
-        btnPause.addEventListener('click', () => container.classList.remove('animating'));
-
-        const talkRhythm = [
-            { mouth: 'open', duration: 150 },
-            { mouth: 'neutral', duration: 170 },
-            { mouth: 'open', duration: 130 },
-            { mouth: 'neutral', duration: 560 },
-            { mouth: 'open', duration: 170 },
-            { mouth: 'neutral', duration: 650 }
-        ];
-
-        function setTalkMouth(mouth) {
-            mouthNeutral.style.opacity = mouth === 'neutral' ? '1' : '0';
-            mouthOpen.style.opacity = mouth === 'open' ? '1' : '0';
-        }
-
-        function runTalkRhythm() {
-            if (!talking) return;
-            const step = talkRhythm[talkStep % talkRhythm.length];
-            setTalkMouth(step.mouth);
-            talkStep += 1;
-            talkTimer = window.setTimeout(runTalkRhythm, step.duration / Number(speedInput.value));
-        }
-
-        function stopTalking() {
-            talking = false;
-            window.clearTimeout(talkTimer);
-            container.classList.remove('talking');
-            btnTalk.setAttribute('aria-pressed', 'false');
-            btnTalk.textContent = '💬 Разговор';
-            mouthNeutral.style.opacity = '';
-            mouthOpen.style.opacity = '';
-            talkStep = 0;
-        }
-
-        btnTalk.addEventListener('click', () => {
-            if (talking) { stopTalking(); return; }
-            talking = true;
-            container.classList.add('talking');
-            btnTalk.setAttribute('aria-pressed', 'true');
-            btnTalk.textContent = '💬 Завершить разговор';
-            talkStep = 0;
-            runTalkRhythm();
-        });
-
-        speedInput.addEventListener('input', () => {
-            speedValue.textContent = Number(speedInput.value).toFixed(1) + '×';
-        });
-
-        btnGreen.addEventListener('click', () => {
-            const enabled = document.body.classList.toggle('chroma-key');
-            btnGreen.setAttribute('aria-pressed', String(enabled));
-            btnGreen.textContent = enabled ? '⬜ Обычный фон' : '🟩 Зелёный фон';
-        });
-    </script>
 </body>
 </html>
