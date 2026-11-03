@@ -9,7 +9,7 @@
 
     const $ = (selector, root = document) => root.querySelector(selector);
     const VALID = {
-        arms: ["default", "down", "point_left", "point_right", "wave"],
+        arms: ["default", "down", "point_left", "point_right", "wave", "notebook"],
         brows: ["default", "high", "low"],
         mouth: ["neutral", "open", "surprised", "talk"],
         eyes: ["open", "closed"],
