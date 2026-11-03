@@ -134,140 +134,293 @@
         const node = el("timeline-status");
         if (node) {
             node.textContent = message;
+            node.style.whiteSpace = "pre-wrap";
             node.dataset.error = String(error);
         }
     };
 
-    function normalizeCard(card, index) {
-        if (card == null) return { type: "none" };
-        if (typeof card !== "object") {
-            throw new Error(`Beat ${index + 1}: card must be an object or null.`);
+    // ---- Lenient parsing: fix what we can, warn about it, skip what we can't ----
+    const ALIASES = {
+        arms: {
+            idle: "default", neutral: "default", rest: "default", normal: "default",
+            point: "point_left", pointing: "point_left",
+            hello: "wave", hi: "wave", waving: "wave",
+            arms_down: "down", lowered: "down"
+        },
+        brows: {
+            neutral: "default", normal: "default",
+            raised: "high", up: "high", surprised: "high",
+            lowered: "low", down: "low", angry: "low", frown: "low"
+        },
+        mouth: {
+            closed: "neutral", close: "neutral", shut: "neutral", smile: "neutral",
+            speak: "talk", speaking: "talk", talking: "talk", say: "talk",
+            wide: "open", ooh: "surprised", shocked: "surprised"
+        },
+        eyes: { close: "closed", shut: "closed", blink: "closed", opened: "open" },
+        head: {
+            nod_down: "nod", yes: "nod", no: "shake",
+            tilt: "tilt_left", left: "tilt_left", right: "tilt_right",
+            still: "none", default: "none", neutral: "none"
+        },
+        position: {
+            center: "top", centre: "top", middle: "top", top_center: "top",
+            left: "upper_left", top_left: "upper_left",
+            bottom_center: "bottom", lower: "bottom"
+        },
+        type: {
+            title: "hook", heading: "hook", foreign: "word", phrase: "word",
+            sub: "translation", subtitle: "translation", meaning: "translation",
+            pronunciation: "transcription", ipa: "transcription", call_to_action: "cta"
+        },
+        size: {
+            s: "m", small: "m", medium: "m", big: "l", large: "l",
+            xlarge: "xl", xxl: "xl", huge: "xl"
         }
-        const normalized = { ...card };
-        if (normalized.subtitle != null && normalized.sub == null) {
-            normalized.sub = normalized.subtitle;
+    };
+
+    const issues = [];
+    let parseNote = "";
+    const warn = message => issues.push(message);
+
+    function coerceEnum(key, value, fallback, where) {
+        if (value == null || value === "") return fallback;
+        const norm = String(value).trim().toLowerCase().replace(/[\s-]+/g, "_");
+        if (VALID[key].includes(norm)) return norm;
+        const alias = ALIASES[key] && ALIASES[key][norm];
+        if (alias) {
+            warn(`${where}: ${key} "${value}" → "${alias}".`);
+            return alias;
         }
-        if (normalized.position != null && !VALID.position.includes(normalized.position)) {
-            throw new Error(`Beat ${index + 1}: invalid card position "${normalized.position}".`);
-        }
-        if (normalized.type != null && !VALID.type.includes(normalized.type)) {
-            throw new Error(`Beat ${index + 1}: invalid card type "${normalized.type}".`);
-        }
-        if (normalized.size != null && !VALID.size.includes(normalized.size)) {
-            throw new Error(`Beat ${index + 1}: invalid card size "${normalized.size}".`);
-        }
-        if (normalized.keep != null && typeof normalized.keep !== "boolean") {
-            throw new Error(`Beat ${index + 1}: card.keep must be boolean.`);
-        }
-        if (normalized.text != null && typeof normalized.text !== "string") {
-            throw new Error(`Beat ${index + 1}: card.text must be a string.`);
-        }
-        if (normalized.sub != null && typeof normalized.sub !== "string") {
-            throw new Error(`Beat ${index + 1}: card.sub must be a string.`);
-        }
-        return normalized;
+        warn(`${where}: unknown ${key} "${value}", using "${fallback}". ` +
+            `Allowed: ${VALID[key].join(", ")}.`);
+        return fallback;
     }
 
-    function normalizePose(rawPose, index) {
-        if (rawPose == null) return { ...DEFAULT_POSE };
-        if (typeof rawPose === "string") {
-            if (!VALID.arms.includes(rawPose)) {
-                throw new Error(`Beat ${index + 1}: invalid pose string "${rawPose}".`);
+    // Accepts 2.5, "2.5", "2,5", "2.5s", "0:02", "0:02.5", "00:00:02".
+    function parseTime(value) {
+        if (typeof value === "number") return Number.isFinite(value) ? value : NaN;
+        if (typeof value !== "string") return NaN;
+        const s = value.trim().replace(",", ".").replace(/s$/i, "");
+        if (!s) return NaN;
+        if (/^\d+(\.\d+)?$/.test(s)) return Number(s);
+        const m = s.match(/^(?:(\d+):)?(\d{1,2}):(\d{1,2}(?:\.\d+)?)$/);
+        if (m) return Number(m[1] || 0) * 3600 + Number(m[2]) * 60 + Number(m[3]);
+        return NaN;
+    }
+
+    // Accepts "t": [a, b] | "a-b" | {start, end} | "start"/"end" | "from"/"to".
+    function readRange(raw) {
+        let a;
+        let b;
+        if (Array.isArray(raw.t)) {
+            if (raw.t.length === 2) [a, b] = raw.t;
+        } else if (typeof raw.t === "string") {
+            const parts = raw.t.split(/\s*(?:-|–|—|→|->|\bto\b)\s*/);
+            if (parts.length === 2) [a, b] = parts;
+        } else if (raw.t && typeof raw.t === "object") {
+            a = raw.t.start;
+            b = raw.t.end;
+        } else {
+            a = raw.start ?? raw.from;
+            b = raw.end ?? raw.to;
+        }
+        return [parseTime(a), parseTime(b)];
+    }
+
+    function normalizeCard(card, where) {
+        if (card == null || card === false) return { type: "none" };
+        if (typeof card === "string" || typeof card === "number") {
+            return { text: String(card) };
+        }
+        if (typeof card !== "object" || Array.isArray(card)) {
+            warn(`${where}: card must be an object or null, card ignored.`);
+            return { type: "none" };
+        }
+        const n = { ...card };
+        const w = `${where} card`;
+        if (n.subtitle != null && n.sub == null) n.sub = n.subtitle;
+        if (n.position != null) n.position = coerceEnum("position", n.position, "top", w);
+        if (n.type != null) n.type = coerceEnum("type", n.type, "hook", w);
+        if (n.size != null) n.size = coerceEnum("size", n.size, "m", w);
+        if (n.keep != null && typeof n.keep !== "boolean") {
+            const k = String(n.keep).trim().toLowerCase();
+            n.keep = k === "true" || k === "1" || k === "yes";
+            warn(`${w}: keep should be true/false, read as ${n.keep}.`);
+        }
+        for (const key of ["text", "sub"]) {
+            if (n[key] == null || typeof n[key] === "string") continue;
+            if (typeof n[key] === "object") {
+                warn(`${w}: ${key} must be a string, removed.`);
+                delete n[key];
+            } else {
+                n[key] = String(n[key]);
             }
-            return { ...DEFAULT_POSE, arms: rawPose };
         }
-        if (typeof rawPose !== "object") {
-            throw new Error(`Beat ${index + 1}: pose must be a string or object.`);
+        if (n.lines != null) {
+            if (!Array.isArray(n.lines)) {
+                warn(`${w}: lines must be an array, removed.`);
+                delete n.lines;
+            } else {
+                n.lines = n.lines
+                    .filter(line => line != null)
+                    .map(line => typeof line === "object"
+                        ? { ...line, role: line.role == null ? "hook"
+                            : coerceEnum("type", line.role, "hook", `${w} line`) }
+                        : { role: "hook", text: String(line) });
+            }
         }
-        const pose = { ...DEFAULT_POSE, ...rawPose };
+        return n;
+    }
+
+    function normalizePose(raw, where) {
+        const src = raw && typeof raw === "object" ? raw : {};
+        const pose = {};
         for (const key of ["arms", "brows", "mouth", "eyes", "head"]) {
-            if (!VALID[key].includes(pose[key])) {
-                throw new Error(`Beat ${index + 1}: invalid ${key} enum.`);
-            }
+            pose[key] = coerceEnum(key, src[key], DEFAULT_POSE[key], where);
         }
         return pose;
     }
 
     function normalizeBeat(raw, index, sourceKey) {
-        if (!raw || typeof raw !== "object") {
-            throw new Error(`${sourceKey}[${index + 1}]: must be an object.`);
+        const where = `${sourceKey}[${index + 1}]`;
+        if (!raw || typeof raw !== "object" || Array.isArray(raw)) {
+            warn(`${where}: not an object, beat skipped.`);
+            return null;
         }
-        let start;
-        let end;
-        if (Array.isArray(raw.t)) {
-            if (raw.t.length !== 2 ||
-                !raw.t.every(v => typeof v === "number" && Number.isFinite(v))) {
-                throw new Error(`${sourceKey}[${index + 1}]: t must be an array of two numbers.`);
-            }
-            [start, end] = raw.t;
-        } else if (Number.isFinite(raw.start) && Number.isFinite(raw.end)) {
-            start = raw.start;
-            end = raw.end;
-        } else {
-            throw new Error(`${sourceKey}[${index + 1}]: missing t/start/end.`);
+        let [start, end] = readRange(raw);
+        if (!Number.isFinite(start) || !Number.isFinite(end)) {
+            warn(`${where}: can't read the time (use "t": [start, end] in seconds), beat skipped.`);
+            return null;
         }
-        if (start < 0 || end <= start) {
-            throw new Error(`${sourceKey}[${index + 1}]: start/end must be valid increasing times.`);
+        if (start < 0) {
+            warn(`${where}: negative start, set to 0.`);
+            start = 0;
         }
-        const speech = raw.say ?? raw.speech ?? "";
+        if (end <= start) {
+            warn(`${where}: end ≤ start, end set to start + 1s.`);
+            end = start + 1;
+        }
+
+        let speech = raw.say ?? raw.speech ?? "";
         if (typeof speech !== "string") {
-            throw new Error(`${sourceKey}[${index + 1}]: say/speech must be a string.`);
+            if (typeof speech === "number") {
+                speech = String(speech);
+            } else {
+                warn(`${where}: say must be a string, set to empty.`);
+                speech = "";
+            }
         }
 
         const {
-            t, say, speech: _sp, start: _s, end: _e, pose, card,
-            brows: _brows, mouth: _mouth, eyes: _eyes, head: _head,
+            t, say, speech: _sp, start: _s, end: _e, from: _f, to: _to, pose, card,
+            arms, brows, mouth, eyes, head,
             ...rest
         } = raw;
 
         // Accept both storyboard formats: nested pose objects and flat prompt fields.
-        const flatPose = {};
-        for (const key of ["brows", "mouth", "eyes", "head"]) {
-            if (raw[key] != null) flatPose[key] = raw[key];
+        const flat = { arms, brows, mouth, eyes, head };
+        let poseInput;
+        if (typeof pose === "string") {
+            poseInput = { ...flat, arms: pose };
+        } else if (pose && typeof pose === "object" && !Array.isArray(pose)) {
+            poseInput = { ...flat, ...pose };
+        } else {
+            if (pose != null) warn(`${where}: pose must be a string or object, ignored.`);
+            poseInput = flat;
         }
-        const poseInput = typeof pose === "string"
-            ? { ...flatPose, arms: pose }
-            : { ...flatPose, ...(pose || {}) };
 
         return {
             ...rest,
             start,
             end,
             speech,
-            pose: normalizePose(poseInput, index),
-            card: normalizeCard(card, index)
+            pose: normalizePose(poseInput, where),
+            card: normalizeCard(card, where)
         };
     }
 
+    const BEAT_KEYS = ["storyboard", "beats", "scenes", "timeline", "script", "segments", "steps"];
+
     function validate(data) {
+        issues.length = 0;
+        if (Array.isArray(data)) data = { beats: data };
         if (!data || typeof data !== "object") {
             throw new Error("Expected a JSON object.");
         }
-        let source = null;
-        let sourceKey = null;
-        if (Array.isArray(data.storyboard) && data.storyboard.length) {
-            source = data.storyboard;
-            sourceKey = "storyboard";
-        } else if (Array.isArray(data.beats) && data.beats.length) {
-            source = data.beats;
-            sourceKey = "beats";
+        const sourceKey = BEAT_KEYS.find(k => Array.isArray(data[k]) && data[k].length);
+        if (!sourceKey) {
+            throw new Error(`Expected a non-empty array under one of: ${BEAT_KEYS.join(", ")}.`);
         }
-        if (!source) {
-            throw new Error('Expected a non-empty "storyboard" or "beats" array.');
+        if (sourceKey !== "storyboard" && sourceKey !== "beats") {
+            warn(`Using "${sourceKey}" as the beats array (expected "beats").`);
         }
 
-        const checked = source.map((beat, index) => normalizeBeat(beat, index, sourceKey));
+        const checked = data[sourceKey]
+            .map((beat, index) => normalizeBeat(beat, index, sourceKey))
+            .filter(Boolean);
+        if (!checked.length) {
+            throw new Error(issues.length
+                ? `No usable beats:\n${issues.join("\n")}`
+                : "No usable beats.");
+        }
         checked.sort((a, b) => a.start - b.start);
-        for (let i = 1; i < checked.length; i++) {
-            if (checked[i].start < checked[i - 1].end - 1e-6) {
-                // перекрытия допустимы, но зафиксируем порядок
+
+        const meta = data.meta && typeof data.meta === "object" ? data.meta : {};
+        const declared = parseTime(meta.duration_sec ?? meta.duration);
+        const end = Math.max(...checked.map(b => b.end));
+        let duration = end;
+        if (declared > 0) {
+            if (declared < end) {
+                warn(`meta.duration_sec (${declared}) is shorter than the last beat (${end}), using ${end}.`);
+            } else {
+                duration = declared;
             }
         }
+        return { meta, beats: checked, duration, warnings: [...issues] };
+    }
 
-        const meta = data.meta || {};
-        const declared = Number(meta.duration_sec);
-        const end = Math.max(...checked.map(b => b.end));
-        return { meta, beats: checked, duration: declared > 0 ? declared : end };
+    function describeJSONError(error, text) {
+        const m = /position (\d+)/.exec(error.message);
+        if (!m) return `Invalid JSON: ${error.message}`;
+        const pos = Number(m[1]);
+        const before = text.slice(0, pos);
+        const line = before.split("\n").length;
+        const col = pos - before.lastIndexOf("\n");
+        return `Invalid JSON at line ${line}, column ${col}: ` +
+            `${error.message.replace(/ in JSON at position.*/, "")}.`;
+    }
+
+    // Parses JSON pasted from a chat: strips ``` fences and BOM, text around the JSON,
+    // trailing commas and curly quotes. Reports what it repaired via parseNote.
+    function parseJSONLoose(text) {
+        parseNote = "";
+        let s = String(text).replace(/^﻿/, "").trim();
+        if (!s) throw new Error("JSON is empty.");
+        const fence = s.match(/```(?:json)?\s*([\s\S]*?)```/i);
+        if (fence) s = fence[1].trim();
+
+        const attempts = [s];
+        const a = s.search(/[{[]/);
+        const b = Math.max(s.lastIndexOf("}"), s.lastIndexOf("]"));
+        if (a >= 0 && b > a) {
+            const core = s.slice(a, b + 1);
+            const noCommas = core.replace(/,\s*([}\]])/g, "$1");
+            attempts.push(core, noCommas, noCommas.replace(/[“”]/g, '"'));
+        }
+        let firstError = null;
+        for (const candidate of attempts) {
+            try {
+                const result = JSON.parse(candidate);
+                if (candidate !== String(text).trim()) {
+                    parseNote = "JSON was auto-repaired (code fence, extra text, trailing comma or curly quotes).";
+                }
+                return result;
+            } catch (error) {
+                firstError = firstError || error;
+            }
+        }
+        throw new Error(describeJSONError(firstError, s));
     }
 
     function readInitialStoryboard() {
@@ -277,14 +430,16 @@
             return;
         }
         try {
-            loadData(JSON.parse(node.textContent));
+            loadData(parseJSONLoose(node.textContent));
         } catch (error) {
             status(`Storyboard JSON error: ${error.message}`, true);
         }
     }
 
     function loadData(data) {
+        const note = parseNote;
         const result = validate(data);
+        const warnings = note ? [note, ...result.warnings] : result.warnings;
         activeStoryboard = data;
         beats = result.beats;
         duration = result.duration;
@@ -300,7 +455,17 @@
         lastArms = null;
         lastHeadBeat = -1;
         applyState(0, true);
-        status(`Loaded ${beats.length} beats · ${duration}s`);
+
+        const summary = `Loaded ${beats.length} beats · ${Number(duration.toFixed(2))}s`;
+        if (!warnings.length) {
+            status(summary);
+            return;
+        }
+        console.warn("Storyboard warnings:\n" + warnings.join("\n"));
+        const shown = warnings.slice(0, 6).map(w => `• ${w}`).join("\n");
+        const more = warnings.length > 6
+            ? `\n… and ${warnings.length - 6} more (see console)` : "";
+        status(`${summary} · ⚠ ${warnings.length} warning(s):\n${shown}${more}`);
     }
 
     function currentBeat(t) {
@@ -589,14 +754,14 @@
         const file = e.target.files[0];
         if (!file) return;
         try {
-            loadData(JSON.parse(await file.text()));
+            loadData(parseJSONLoose(await file.text()));
         } catch (error) {
             status(`Could not load JSON: ${error.message}`, true);
         }
     });
     el("tl-load").addEventListener("click", () => {
         try {
-            loadData(JSON.parse(el("tl-paste").value));
+            loadData(parseJSONLoose(el("tl-paste").value));
         } catch (error) {
             status(`Could not load JSON: ${error.message}`, true);
         }
