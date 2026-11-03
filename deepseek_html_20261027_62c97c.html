@@ -38,7 +38,11 @@
         /* Панель управления */
         .controls {
             display: flex;
-            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 0 12px 16px;
         }
 
         button {
@@ -68,92 +72,158 @@
         }
         #btn-pause:hover { box-shadow: 0 6px 20px rgba(16, 48, 78, 0.6); }
 
-        /* --- CSS АНИМАЦИИ --- */
+        /* --- FOX TEST ANIMATION v2 --- */
 
-        /* По умолчанию все анимации на паузе */
-        #mascot_mouth, #mascot_eyebrows, #arms_pose_default, #eyes {
+        /*
+          The SVG contains several alternative drawing poses in the same file.
+          Keep exactly one pose visible at a time; otherwise duplicate arms,
+          mouths and brows overlap and make the character look broken.
+        */
+        #arms_pose_down,
+        #arms_pose_point_left,
+        #arms_pose_wave,
+        #eyebrows_high,
+        #eyebrows_low,
+        #mouth_open,
+        #mouth_surprised {
+            display: none !important;
+        }
+
+        #arms_pose_default,
+        #eyebrows_default,
+        #mouth_neutral {
+            display: inline;
+        }
+
+        /* The open mouth is hidden by default; timeline.css switches it via data-mouth. */
+        #mouth_open { display: none !important; opacity: 0; }
+
+        body.chroma-key { background: #00FF00; }
+        body.chroma-key .svg-container {
+            background: #00FF00;
+            box-shadow: none;
+            border-radius: 0;
+        }
+
+        /* Chroma-key mode: hide the illustrated scene, leaving the fox artwork visible. */
+        body.chroma-key #bg {
+            display: none !important;
+        }
+        #btn-green {
+            background-color: #3DAA8C;
+            box-shadow: 0 4px 15px rgba(61, 170, 140, 0.35);
+        }
+        body.chroma-key #btn-green { background-color: #10304E; }
+
+        /* Stable resting face before the animation is started. */
+        #mascot_eyes_open {
+            opacity: 1;
+            animation: none;
+        }
+
+        #eyes_closed {
+            opacity: 0;
+            animation: none;
+        }
+
+        /* All movement is paused until the Start button is pressed. */
+        #mascot,
+        #mascot_body,
+        #mascot_head,
+        #mascot_tail,
+        #mascot_eyes_open,
+        #eyes_closed {
             animation-play-state: paused;
         }
 
-        /* 1. Анимация рта (переключение нейтрального и открытого) */
-        #mouth_neutral {
-            animation: talkNeutral 0.3s infinite alternate ease-in-out;
-            animation-play-state: inherit;
-        }
-        #mouth_open {
-            animation: talkOpen 0.3s infinite alternate ease-in-out;
-            animation-play-state: inherit;
-        }
-        @keyframes talkNeutral {
-            0% { opacity: 1; }
-            100% { opacity: 0; }
-        }
-        @keyframes talkOpen {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+        /* A tiny whole-character float gives the idle animation some life. */
+        #mascot {
+            transform-box: fill-box;
+            transform-origin: center bottom;
+            animation: foxFloat 3.8s ease-in-out infinite;
         }
 
-        /* 2. Брови (поднимаются при разговоре) */
-        #eyebrows_default {
-            animation: browDown 0.6s infinite alternate ease-in-out;
-            animation-play-state: inherit;
-        }
-        #eyebrows_high {
-            animation: browUp 0.6s infinite alternate ease-in-out;
-            animation-play-state: inherit;
-        }
-        @keyframes browDown {
-            0% { opacity: 1; }
-            100% { opacity: 0; }
-        }
-        @keyframes browUp {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+        @keyframes foxFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-0.45%); }
         }
 
-        /* 3. Покачивание рук (жесты) */
-        #arms_pose_default {
-            transform-origin: center 70%; /* Точка вращения у плеч */
-            animation: armsSway 2s infinite ease-in-out;
-            animation-play-state: inherit;
+        /* Subtle breathing; the lower edge stays almost anchored. */
+        #mascot_body {
+            transform-box: fill-box;
+            transform-origin: 50% 100%;
+            animation: foxBreathe 3.4s ease-in-out infinite;
         }
-        @keyframes armsSway {
+
+        @keyframes foxBreathe {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(1.006); }
+        }
+
+        /* A very small head nod, not a constant exaggerated bob. */
+        #mascot_head {
+            transform-box: fill-box;
+            transform-origin: 50% 92%;
+            animation: foxHeadIdle 4.6s ease-in-out infinite;
+        }
+
+        @keyframes foxHeadIdle {
             0%, 100% { transform: rotate(0deg); }
-            25% { transform: rotate(1.5deg); }
-            75% { transform: rotate(-1.5deg); }
+            45% { transform: rotate(-0.35deg); }
+            70% { transform: rotate(0.15deg); }
         }
 
-        /* 4. Моргание глаз */
-        #mascot_eyes_open {
-            animation: blinkOpen 4s infinite;
-            animation-play-state: inherit;
+        /* Tail sways gently around the point where it joins the body. */
+        #mascot_tail {
+            transform-box: fill-box;
+            transform-origin: 88% 82%;
+            animation: foxTailSway 2.9s ease-in-out infinite;
         }
+
+        @keyframes foxTailSway {
+            0%, 100% { transform: rotate(0deg); }
+            35% { transform: rotate(-1.8deg); }
+            70% { transform: rotate(1.2deg); }
+        }
+
+        /* One quick blink every few seconds. No artificial talking animation. */
+        #mascot_eyes_open {
+            animation: foxEyesOpen 5.2s infinite;
+        }
+
         #eyes_closed {
-            animation: blinkClosed 4s infinite;
-            animation-play-state: inherit;
+            animation: foxEyesClosed 5.2s infinite;
             opacity: 0;
         }
-        @keyframes blinkOpen {
-            0%, 96%, 100% { opacity: 1; }
-            98% { opacity: 0; }
-        }
-        @keyframes blinkClosed {
-            0%, 96%, 100% { opacity: 0; }
-            98% { opacity: 1; }
+
+        @keyframes foxEyesOpen {
+            0%, 91%, 95%, 100% { opacity: 1; }
+            93% { opacity: 0; }
         }
 
-        /* Класс для запуска всех анимаций */
-        .animating #mascot_mouth,
-        .animating #mascot_eyebrows,
-        .animating #arms_pose_default,
-        .animating #eyes,
-        .animating #mouth_neutral,
-        .animating #mouth_open,
-        .animating #eyebrows_default,
-        .animating #eyebrows_high,
+        @keyframes foxEyesClosed {
+            0%, 91%, 95%, 100% { opacity: 0; }
+            93% { opacity: 1; }
+        }
+
+        .animating #mascot,
+        .animating #mascot_body,
+        .animating #mascot_head,
+        .animating #mascot_tail,
         .animating #mascot_eyes_open,
         .animating #eyes_closed {
             animation-play-state: running;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animating #mascot,
+            .animating #mascot_body,
+            .animating #mascot_head,
+            .animating #mascot_tail,
+            .animating #mascot_eyes_open,
+            .animating #eyes_closed {
+                animation: none;
+            }
         }
 
     </style>
@@ -161,7 +231,7 @@
 <body>
 
     <div class="svg-container" id="fox-container">
-        <!-- ВАШ SVG КОД -->
+        <!-- Embedded fox SVG: keep the artwork and layer IDs intact. -->
         <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210mm" height="297mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
         viewBox="0 0 21000 29700"
         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -752,22 +822,12 @@
     <div class="controls">
         <button id="btn-start">▶ Старт</button>
         <button id="btn-pause">⏸ Пауза</button>
+        <button id="btn-green" aria-pressed="false">🟩 Зелёный фон</button>
     </div>
+    <link rel="stylesheet" href="timeline.css">
+    <script type="application/json" id="storyboard">{"meta":{"language":"armenian","rubric":"Стройка по-армянски","duration_sec":12.5},"beats":[{"t":[0,2.5],"say":"Пять слов для стройки по-армянски.","pose":"default","brows":"high","mouth":"talk","eyes":"open","head":"nod","card":null},{"t":[2.5,4.5],"say":"Шлем.","foreign":"Սաղավարտ","transcription":"[сахАварт]","verify":true,"pose":"down","brows":"default","mouth":"talk","eyes":"open","head":"none","card":{"position":"top","text":"Սաղավարտ","sub":"[сахАварт] — шлем"}},{"t":[4.5,6.5],"say":"Каска.","foreign":"Կասկա","transcription":"[каскА]","verify":true,"pose":"down","brows":"default","mouth":"talk","eyes":"open","head":"none","card":{"position":"top","text":"Կասկա","sub":"[каскА] — каска"}},{"t":[6.5,8.5],"say":"Молоток.","foreign":"Մուրճ","transcription":"[мурч]","verify":true,"pose":"down","brows":"default","mouth":"talk","eyes":"open","head":"none","card":{"position":"top","text":"Մուրճ","sub":"[мурч] — молоток"}},{"t":[8.5,10.5],"say":"Гвоздь.","foreign":"Մեխ","transcription":"[мех]","verify":true,"pose":"down","brows":"default","mouth":"talk","eyes":"open","head":"none","card":{"position":"top","text":"Մեխ","sub":"[мех] — гвоздь"}},{"t":[10.5,12.5],"say":"Кирпич.","foreign":"Աղյուս","transcription":"[ахЮс]","verify":true,"pose":"down","brows":"default","mouth":"talk","eyes":"open","head":"none","card":{"position":"top","text":"Աղյուս","sub":"[ахЮс] — кирпич"}}]}</script>
+    <script src="timeline.js" defer></script>
+    <!-- Keep the existing SVG artwork and all its IDs unchanged. -->
 
-    <script>
-        const container = document.getElementById('fox-container');
-        const btnStart = document.getElementById('btn-start');
-        const btnPause = document.getElementById('btn-pause');
-
-        // Запуск анимации
-        btnStart.addEventListener('click', () => {
-            container.classList.add('animating');
-        });
-
-        // Пауза
-        btnPause.addEventListener('click', () => {
-            container.classList.remove('animating');
-        });
-    </script>
 </body>
 </html>
