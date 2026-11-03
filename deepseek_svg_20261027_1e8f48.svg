@@ -440,7 +440,63 @@ viewBox="0 0 21000 29700"
       </g>
      </g>
     </g>
-    <g id="arms_pose_wave">
+        <g id="arms_pose_point_right">
+    <g id="arm_l_point_right">
+                  <path id="arm_l_point_right_outline" class="fil7 str29" d="M7192.71 16437.5c-1455.21,1058.33 -2248.96,3175 -1984.38,5688.54"/>
+                  <path id="arm_l_point_right_fill" class="fil7 str30" d="M7192.71 16437.5c-1455.21,1058.33 -2248.96,3175 -1984.38,5688.54"/>
+                  <path id="arm_l_point_right_shade" class="fil35 str31" d="M7457.29 16649.17c-1455.21,1058.33 -2248.96,3175 -1984.37,5688.54"/>
+                  <path id="arm_l_point_right_highlight" class="fil23 str32" d="M6954.58 16225.83c-1455.21,1058.34 -2248.96,3175 -1984.37,5688.55"/>
+                  <path id="arm_l_point_right_fur" class="fil36 str33" d="M7192.71 16437.5c-1455.21,1058.33 -2248.96,3175 -1984.38,5688.54"/>
+                  <circle id="hand_l_point_right_default" class="fil11 str13" cx="5340.62" cy="22390.63" r="1111.25"/>
+                  <path id="hand_l_point_right_default_highlight" class="fil22 str34" d="M4732.08 21993.75c141.11,-246.94 379.24,-370.42 714.38,-370.42"/>
+                  <path id="hand_l_point_right_default_creases" class="fil36 str35" d="M5023.12 22893.33l0 396.88m423.34 -343.96l0 396.88m423.33 -476.25l0 343.95"/>
+                  <g id="notebook_point_right_default">
+                   <path class="fil37" d="M4282.29 22073.13l2540 0c175.33,-0.01 317.51,142.17 317.51,317.49l-0.01 3598.34c0.01,175.31 -142.17,317.49 -317.49,317.49l-2540.01 0.01c-175.31,-0.01 -317.49,-142.19 -317.49,-317.51l-0.01 -3598.32c0.01,-175.33 142.19,-317.51 317.51,-317.51z"/>
+                   <path class="fil0 str13" d="M4070.62 21861.46l2540.01 0c175.33,-0.01 317.51,142.17 317.51,317.49l-0.02 3598.34c0.02,175.31 -142.16,317.49 -317.48,317.49l-2540.02 0.01c-175.31,-0.01 -317.49,-142.19 -317.49,-317.51l-0.01 -3598.32c0.01,-175.33 142.19,-317.51 317.51,-317.51z"/>
+                   <path class="fil38 str7" d="M3911.87 21861.46l158.75 0c87.67,-0.01 158.76,71.08 158.76,158.74l-0.01 3915.84c0.01,87.65 -71.08,158.74 -158.74,158.74l-158.76 0.01c-87.65,-0.01 -158.74,-71.1 -158.74,-158.76l-0.01 -3915.82c0.01,-87.67 71.1,-158.76 158.76,-158.76z"/>
+                   <path class="fil14 str26" d="M4917.29 22231.88l1428.75 0c58.45,-0.01 105.84,47.38 105.84,105.82l0 158.76c0,58.43 -47.39,105.82 -105.83,105.82l-1428.76 0.01c-58.43,-0.01 -105.82,-47.4 -105.82,-105.84l-0.01 -158.74c0.01,-58.45 47.4,-105.84 105.84,-105.84z"/>
+                   <polygon id="notebook_point_right_bookmark" class="fil39 str36" points="6293.12,21861.46 6293.12,22761.04 6504.79,22575.83 6716.46,22761.04 6716.46,21861.46 "/>
+                   <g>
+                    <path id="notebook_point_right_line_1" class="fil6" d="M4811.46 22919.79l1455.21 0 -1455.21 0zm0 0l0 0 0 0z"/>
+                    <path id="point_right_l_1_18" class="fil7 str37" d="M4811.46 22919.79l1455.21 0m-1455.21 0l0 0 0 0z"/>
+                   </g>
+                   <g>
+                    <path id="notebook_point_right_line_2" class="fil6" d="M4811.46 23713.54l1455.21 0 -1455.21 0zm0 0l0 0 0 0z"/>
+                    <path id="point_right_l_1_19" class="fil7 str37" d="M4811.46 23713.54l1455.21 0m-1455.21 0l0 0 0 0z"/>
+                   </g>
+                   <g>
+                    <path id="notebook_point_right_line_3" class="fil6" d="M4811.46 24507.29l1058.33 0 -1058.33 0zm0 0l0 0 0 0z"/>
+                    <path id="point_right_l_1_20" class="fil7 str37" d="M4811.46 24507.29l1058.33 0m-1058.33 0l0 0 0 0z"/>
+                   </g>
+                   <path class="fil11 str7" d="M6213.75 22205.42l0 0c87.67,-0.01 158.76,71.08 158.76,158.74l-0.01 1534.59c0.01,87.65 -71.08,158.74 -158.74,158.74l-0.01 0.01c-87.65,-0.01 -158.74,-71.1 -158.74,-158.76l-0.01 -1534.57c0.01,-87.67 71.1,-158.76 158.76,-158.76z"/>
+                   <g id="notebook_point_right_rings">
+                    <circle id="notebook_point_right_ring_1" class="fil0 str26" cx="3991.25" cy="22655.21" r="132.29"/>
+                    <circle id="notebook_point_right_ring_2" class="fil0 str26" cx="3991.25" cy="23713.54" r="132.29"/>
+                    <circle id="notebook_point_right_ring_3" class="fil0 str26" cx="3991.25" cy="24771.88" r="132.29"/>
+                    <circle id="notebook_point_right_ring_4" class="fil0 str26" cx="3991.25" cy="25830.21" r="132.29"/>
+                   </g>
+                   <polygon id="notebook_point_right_corner" class="fil40 str38" points="6346.04,26094.79 6928.12,25512.71 6928.12,26094.79 "/>
+                   <polygon id="notebook_point_right_pen_tip" class="fil0 str38" points="6055,24057.5 6372.5,24057.5 6213.75,24427.92 "/>
+                   <path class="fil15" d="M6187.29 22205.42l52.92 0c73.06,-0.01 132.3,59.23 132.3,132.28l-0.01 105.84c0.01,73.04 -59.23,132.28 -132.28,132.28l-52.93 0.01c-73.04,-0.01 -132.28,-59.25 -132.28,-132.3l-0.01 -105.82c0.01,-73.06 59.25,-132.3 132.3,-132.3z"/>
+                  </g>
+                 </g>
+    <g id="arm_r_point_right" transform="translate(21000 0) scale(-1 1)">
+                  <path id="arm_r_point_right_outline" class="fil7 str29" d="M7192.71 16437.5c-1719.79,-1058.33 -3571.88,-1852.08 -5159.38,-2381.25"/>
+                  <path id="arm_r_point_right_fill" class="fil7 str30" d="M7192.71 16437.5c-1719.79,-1058.33 -3571.88,-1852.08 -5159.38,-2381.25"/>
+                  <path id="arm_r_point_right_shade" class="fil23 str32" d="M7457.29 16649.17c-1719.79,-1058.34 -3571.87,-1852.09 -5159.37,-2381.25"/>
+                  <path id="arm_r_point_right_highlight" class="fil35 str31" d="M6954.58 16225.83c-1719.79,-1058.33 -3571.87,-1852.08 -5159.37,-2381.25"/>
+                  <path id="arm_r_point_right_fur" class="fil36 str33" d="M7192.71 16437.5c-1719.79,-1058.33 -3571.88,-1852.08 -5159.38,-2381.25"/>
+                  <circle id="hand_r_point_right" class="fil11 str13" cx="1768.75" cy="13791.67" r="1190.62"/>
+                  <path id="hand_r_point_right_highlight" class="fil22 str34" d="M1430.24 13014.91c276.41,-137.12 567.9,-117.93 874.43,57.55"/>
+                  <g>
+                   <path id="finger_r_point_right" class="fil11" d="M1430.24 13349.61l-1278.52 -892.52c-189.41,-148.76 -260.44,-334.69 -213.09,-557.83 47.35,-223.12 165.74,-260.31 355.15,-111.56l1278.52 892.52 -142.06 669.39zm0 0l0 0 0 0z"/>
+                   <path id="point_right_r_1_22" class="fil7 str9" d="M1430.24 13349.61l-1278.52 -892.52c-189.41,-148.76 -260.44,-334.69 -213.09,-557.83 47.35,-223.12 165.74,-260.31 355.15,-111.56l1278.52 892.52m-142.06 669.39l0 0 0 0z"/>
+                  </g>
+                  <line id="finger_r_point_right_highlight" class="fil22 str34" x1="1430.24" y1="13014.91" x2="322.19" y2= "12233.96" />
+                  <path id="finger_r_point_right_claw" class="fil0 str38" d="M94.9 11966.21c-94.71,-193.39 -75.77,-282.63 56.82,-267.76 -56.82,89.25 -75.77,178.51 -56.82,267.76z"/>
+                 </g>
+                </g>
+<g id="arms_pose_wave">
      <g id="arm_l_wave">
       <path id="arm_l_wave_outline" class="fil7 str29" d="M7192.71 16437.5c-1455.21,-1852.08 -2513.54,-3704.17 -2778.13,-5820.83"/>
       <path id="arm_l_wave_fill" class="fil7 str30" d="M7192.71 16437.5c-1455.21,-1852.08 -2513.54,-3704.17 -2778.13,-5820.83"/>
