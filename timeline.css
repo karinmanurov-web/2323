@@ -502,3 +502,40 @@ body.timeline-panel-hidden #timeline-toggle {
         justify-content: center !important;
     }
 }
+
+/* Video export row (video-export.js). */
+#timeline-panel #ex-go {
+    background: #2E8B72;
+    border-color: #3DAA8C;
+    font-weight: 700;
+}
+#timeline-panel button:disabled,
+#timeline-panel input:disabled,
+#timeline-panel select:disabled,
+#timeline-panel textarea:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+#timeline-panel #ex-progress {
+    width: min(40vw, 200px);
+    accent-color: #3DAA8C;
+}
+#ex-status {
+    flex-basis: 100%;
+    text-align: center;
+    white-space: pre-wrap;
+}
+#ex-status[data-error="true"] {
+    color: #ffb4a9;
+}
+
+/* While exporting, the stage is laid out at its canonical 9:16 size (1080x1920) off screen,
+   so the video does not depend on the window size. Must win over the responsive rules above. */
+body.timeline-exporting #fox-container {
+    position: fixed !important;
+    left: -20000px !important;
+    top: 0 !important;
+    width: 1080px !important;
+    height: 1920px !important;
+    transform: none !important;
+}
