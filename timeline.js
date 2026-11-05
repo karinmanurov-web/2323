@@ -56,6 +56,9 @@
     let previousCard = null;
     let activeStoryboard = null;
     let manualMouthSpeed = 1;
+    let audioFile = null;
+    let exportLock = false;   // true while the video exporter drives the timeline
+    let exportLevel = null;   // (t) => 0..1 loudness, used for lip-sync while exporting
 
     container.classList.add("timeline-active");
     container.dataset.arms = "default";
@@ -480,6 +483,9 @@
             // Если это конец фразы или текст пустой, рот закрыт
             if (remaining <= 0.15 || !beat.speech || !beat.speech.trim()) {
                 container.dataset.mouth = "neutral";
+            } else if (exportLevel) {
+                // Offline export: loudness comes from the decoded audio, not the live analyser.
+                container.dataset.mouth = exportLevel(t) > 0.035 ? "open" : "neutral";
             } else if (audioEnabled && analyser && el("tl-lipsync").checked) {
                 // Логика липсинка
                 analyser.getByteTimeDomainData(audioData);
@@ -633,7 +639,7 @@
     }
 
     function play() {
-        if (running) return;
+        if (running || exportLock) return;
         if (!beats.length) return status("Load a valid storyboard first.", true);
         if (time >= duration) time = 0;
         running = true;
@@ -651,6 +657,7 @@
     }
 
     function restart() {
+        if (exportLock) return;
         pause();
         time = 0;
         lastTime = -1;
@@ -661,6 +668,7 @@
     }
 
     function seek(value) {
+        if (exportLock) return;
         const wasRunning = running;
         pause();
         time = Math.max(0, Math.min(duration, Number(value) || 0));
@@ -674,6 +682,7 @@
         stopAudio();
         if (audioURL) URL.revokeObjectURL(audioURL);
         audioURL = URL.createObjectURL(file);
+        audioFile = file;
         audio = new Audio(audioURL);
         audio.preload = "auto";
         audio.volume = 0;
@@ -818,5 +827,56 @@
         document.body.classList.add("timeline-clean");
         panelHidden = true;
     }
+    // Small public API for the video exporter (video-export.js).
+    window.foxTimeline = {
+        get beats() { return beats; },
+        get duration() { return duration; },
+        get meta() { return (activeStoryboard && activeStoryboard.meta) || {}; },
+        get audioFile() { return audioFile; },
+        get audioOffset() { return audioOffset; },
+        get background() { return bg; },
+        get subtitles() { return subtitles; },
+        get lipSync() { return Boolean(el("tl-lipsync").checked); },
+        get running() { return running; },
+        beatAt(t) {
+            const index = currentBeat(t);
+            return index >= 0 ? beats[index] : null;
+        },
+        // Freeze playback and take control of the stage. Returns a token for endExport().
+        beginExport() {
+            const token = { time, animating: container.classList.contains("animating") };
+            pause();
+            exportLock = true;
+            lastTime = -1;
+            lastArms = null;
+            lastHeadBeat = -1;
+            currentCardKey = "";
+            previousCard = null;
+            cards.replaceChildren();
+            container.classList.add("animating");
+            return token;
+        },
+        // Put the stage into the state for time t (level: optional (t) => loudness for lip-sync).
+        renderFrameState(t, level) {
+            exportLevel = typeof level === "function" ? level : null;
+            applyState(t, true);
+        },
+        endExport(token) {
+            exportLevel = null;
+            for (const animation of container.getAnimations({ subtree: true })) animation.cancel();
+            container.classList.remove("animating");
+            void container.offsetWidth;
+            if (token && token.animating) container.classList.add("animating");
+            exportLock = false;
+            lastTime = -1;
+            lastArms = null;
+            lastHeadBeat = -1;
+            currentCardKey = "";
+            previousCard = null;
+            cards.replaceChildren();
+            applyState(token ? token.time : 0, true);
+        }
+    };
+
     readInitialStoryboard();
 })();
